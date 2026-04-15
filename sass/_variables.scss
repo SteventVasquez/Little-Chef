@@ -1,0 +1,39 @@
+// 1. Definición de colores base
+$remy-blue:    #5D707F;
+$copper:       #B35D33;
+$strawberry:   #D93636;
+$parsley:      #6B8E23;
+$saffron:      #F2B705;
+$wine:         #8C1C1C;
+$linen:        #D9C5B2;
+$chef-white:   #F9F9F2;
+$ego-black:    #2D2926;
+
+// 2. Mapa de colores tipo Bootstrap
+$theme-colors: (
+  "primary":    $remy-blue,
+  "secondary":  $copper,
+  "accent":     $strawberry,
+  "success":    $parsley,
+  "info":       #89CFF0,
+  "warning":    $saffron,
+  "danger":     $wine,
+  "light":      $chef-white,
+  "dark":       $ego-black
+);
+
+// 3. Utilidad para generar clases (ejemplo rápido)
+@each $name, $color in $theme-colors {
+  .btn-#{$name} {
+    background-color: $color;
+    color: if(lightness($color) > 60, $ego-black, white);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    
+    &:hover {
+      background-color: darken($color, 10%);
+    }
+  }
+}
