@@ -57,5 +57,17 @@ $spacers:(
   "5":$spacer * 3,
 );
 
+// Grid Breakpoints
+$grid-breakpoints: (
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+);
 
+//variables de sistema de columnas
+$grid-columns: 12; // Número de columnas
+$gutter-width: 1.5rem; // Espaciado entre columnas
+$grid-row-columns:  6; // Número de columnas en el grid-row
 
