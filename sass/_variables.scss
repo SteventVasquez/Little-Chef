@@ -1,39 +1,61 @@
-// 1. Definición de colores base
-$remy-blue:    #5D707F;
-$copper:       #B35D33;
-$strawberry:   #D93636;
-$parsley:      #6B8E23;
-$saffron:      #F2B705;
-$wine:         #8C1C1C;
-$linen:        #D9C5B2;
-$chef-white:   #F9F9F2;
-$ego-black:    #2D2926;
 
-// 2. Mapa de colores tipo Bootstrap
+$primary:#5D707F;
+$secondary:#B35D33;
+$success:#6B8E23;
+$info:#89CFF0;
+$warning:#F2B705;
+$danger:#8C1C1C;
+$light:#F9F9F2;
+$alert:#D93636;
+$dark:#2D2926;
+
+//colores base
 $theme-colors: (
-  "primary":    $remy-blue,
-  "secondary":  $copper,
-  "accent":     $strawberry,
-  "success":    $parsley,
-  "info":       #89CFF0,
-  "warning":    $saffron,
-  "danger":     $wine,
-  "light":      $chef-white,
-  "dark":       $ego-black
+  "primary":    $primary,
+  "secondary":  $secondary,
+  "success":     $success,
+  "info":       $info,
+  "warning":    $warning,
+  "danger":     $danger,
+  "light":      $light,
+  "dark":       $dark,
 );
 
-// 3. Utilidad para generar clases (ejemplo rápido)
-@each $name, $color in $theme-colors {
-  .btn-#{$name} {
-    background-color: $color;
-    color: if(lightness($color) > 60, $ego-black, white);
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    cursor: pointer;
-    
-    &:hover {
-      background-color: darken($color, 10%);
-    }
-  }
-}
+//variables layout
+
+$grid-breakpoints: (
+  sm: 576px,
+  md:768px,
+  lg:992px,
+  xl:1200px,
+  xxl:1440px,
+);
+
+//variables sistema de columnas
+
+$grid-columns: 12;
+$gutter-width: 16px;//espacio entre columnas
+//tamaño de contenedores
+$container-max-widths:(
+  sm:540px,
+  md:720px,
+  lg:960px,
+  xl:1140px
+  xxl:1400px,
+);
+ //padding de los containers
+$c-padding: 25px;
+
+//espaciados predeterminados para margenes y paddings
+$spacer: 1rem;
+$spacers:(
+  "0":0,
+  "1":$spacer * .25,
+  "2":$spacer * .5,
+  "3":$spacer
+  "4":$spacer * 1.5,
+  "5":$spacer * 3,
+);
+
+
+
