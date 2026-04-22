@@ -1,0 +1,5 @@
+@use "./mixins/grid" as mixin-grid;
+
+@include mixin-grid.generate-grid;
+
+
