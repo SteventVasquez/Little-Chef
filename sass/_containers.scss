@@ -1,0 +1,46 @@
+@use "./variables" as v;
+@use "./mixins/containers" as c;
+// @use "./mixins/breakpoints" as bp;
+@use "sass:map";
+
+//container-flui siempre el 100% del espacio
+@include c.generate-containers;
+
+//estilo base
+
+// .container, 
+// .container-fluid {
+//     width: 100%;
+//     padding-left: v.$container-padding;
+//     padding-right: v.$container-padding;
+
+// }
+//contenedor responsivo
+// .container {
+//     @each $breakpoint, $max-width in v.$container-max-widths {
+//         @media (min-width: map.get(v.$grid-breakpoints, $breakpoint)){
+//             max-width:$max-width
+//         }
+        
+//     }
+// }
+
+//contenedores con diferentes anchos
+// @each $breakpoint, $max-width in v.$container-max-widths{
+//     .container-#{$breakpoint}{
+//         width: 100%;
+//         max-width: $max-width;
+//         padding-left: v.$container-padding;
+//         padding-right: v.$container-padding;
+//     }
+// }
+// .container {
+//     @include mi-layout.make-container();
+
+// }
+
+// .container-fluid {
+//     width: 100%;
+//     padding-left: 1rem;
+//     padding-right: 1rem;
+// }

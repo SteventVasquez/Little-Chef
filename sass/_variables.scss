@@ -1,0 +1,67 @@
+
+$primary:#5D707F;
+$secondary:#B35D33;
+$success:#6B8E23;
+$info:#89CFF0;
+$warning:#F2B705;
+$danger:#8C1C1C;
+$light:#F9F9F2;
+$alert:#D93636;
+$dark:#2D2926;
+
+//colores base
+$theme-colors: (
+  "primary":    $primary,
+  "secondary":  $secondary,
+  "success":     $success,
+  "info":       $info,
+  "warning":    $warning,
+  "danger":     $danger,
+  "light":      $light,
+  "dark":       $dark,
+);
+
+//variables layout
+//en px los valores de cuadricula
+//puntos de quiebre pantalla
+$grid-breakpoints: (
+  xs: 0px,
+  sm: 576px,
+  md:768px,
+  lg:992px,
+  xl:1200px,
+  xxl:1400px,
+);
+
+
+//tamaño de contenedores
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1400px,
+);
+
+ //padding de los containers
+$container-padding: 1rem;
+
+//variables de sistema de columnas
+$grid-columns: 12; // anchos en porcentaje de cada columna individual
+$gutter-width: 1.5rem; //espaciado entre columnas
+$grid-row-columns: 6; 
+
+//espaciados predeterminados para margenes y paddings
+$spacer: 1rem;
+$spacers:(
+  "0":0,
+  "1":$spacer * .25,
+  "2":$spacer * .5,
+  "3":$spacer,
+  "4":$spacer * 1.5,
+  "5":$spacer * 3,
+);
+
+
+
