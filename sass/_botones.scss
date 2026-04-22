@@ -1,5 +1,6 @@
 @use 'fonts' as *;
 @use 'variables' as *;
+@use 'sass:color';
 .btn{
     display: inline-block;
     font-family: $font-playfair;
@@ -39,8 +40,8 @@
         color: $light;
 
         &:hover{
-            background-color: darken($color, 10%);
-            border-color: darken($color, 10%);
+            background-color: color.scale($color, $lightness: -10%);
+            border-color: color.scale($color, $lightness: -10%);
         }
 
         &:active{

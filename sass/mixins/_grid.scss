@@ -1,77 +1,50 @@
 @use "../variables" as v;
 
-//contenedores responsivos
-@mixin make-container($breakpoint, $max-width){
-    @media (min-width: $breakpoint){
-        max-width: $max-width;
+@mixin make-row {
+    display: flex;
+    flex-wrap: wrap;
+
+    margin-right: calc(v.$gutter-width / -2);
+    margin-left: calc(v.$gutter-width / -2);
+}
+
+
+@mixin generate-grid {
+    .row{
+        @include make-row;
     }
-}
-//.col-n
-@mixin make-col($size) {
-    flex: 0 0 calc((100% /#{v.$grid-columns}) * #{$size});
-    max-width: calc((100% /#{v.$grid-columns}) * #{$size});
 
-}
+    .col {
+        flex: 1 0 0%;
+        padding-right: calc(v.$gutter-width /2);
+        padding-left: calc(v.$gutter-width /2);
 
-@mixin make-col-auto(){
-    flex: 0 0 auto;
-    max-width: none;
-}
+    }
 
-@mixin make-row-cols($size) {
-    .row-cols-#{$size} {
-        > *{
-            flex: 0 0 calc(100% / #{$size});
-            max-width: calc(100% / #{$size});
+    //columnas base .col-1... .col-12
+    @for $i from 1 through v.$grid-columns {
+        .col-#{$i}{
+            flex: 0 0 calc(($i / v.$grid-columns) * 100%);
+            max-width:  calc(($i / v.$grid-columns) * 100%);
+            padding-right: calc(v.$gutter-width / 2);
+            padding-left: calc(v.$gutter-width /2);
         }
     }
-      
-}
 
-@mixin make-responsive-row-cols(){
-    @each $breakpoint, $value in v.$grid-breakpoints{
-        @media(min-width: $value){
+    /*col responsivas*/
+
+    @each $bp, $value in v.$grid-breakpoints {
+        @media (min-width: $value){
             @for $i from 1 through v.$grid-columns{
-                .row-cols-#{$breakpoint}-#{$i}{
-                    > * {
-                        flex: 0 0 calc(100%/ #{$i});
-                        max-width: calc(100% #{$i});
-
-                    }
+                .col-#{$bp}-#{$i}{
+                    flex: 0 0 calc(($i / v.$grid-columns) * 100%);
+                    max-width:  calc(($i / v.$grid-columns) * 100%);
                 }
             }
         }
+
     }
 }
 
 
-//.col-n con tamaño fijo w=width
-// @mixin make-col-fixed {
-//     @for $i from 1 through v.$grid-columns {
-//         .col-#{$i}{
-//             $w: ($i / v.$grid-columns)* 100%;
-//             flex: 0 0 $w;
-//             max-width: $w;
 
-//         }
-
-//     }
-// }
-
-//.col responsive -> .col-sm-6
-
-// @mixin make-col-responsive {
-//     @each $bp, $value in v.$grid-breakpoints{
-//         @include respond-to($bp){
-//             @for $i from 1 through v.$grid-columns{
-//                 .col-#{$bp}-#{$i} {
-//                     $w: ($i /v.$grid-columns)*100%;
-//                     flex: 0 0 $w;
-//                     max-width: $w;
-//                 }
-//             }
-
-//         }
-
-//     }
-// }
