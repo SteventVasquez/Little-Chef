@@ -13,7 +13,7 @@ $dark:#2D2926;
 $theme-colors: (
   "primary":    $primary,
   "secondary":  $secondary,
-  "success":     $success,
+  "success":    $success,
   "info":       $info,
   "warning":    $warning,
   "danger":     $danger,
@@ -43,8 +43,6 @@ $container-max-widths: (
   xl: 1140px,
   xxl: 1400px,
 );
-
- //padding de los containers
 $container-padding: 1rem;
 
 //variables de sistema de columnas
@@ -62,6 +60,3 @@ $spacers:(
   "4":$spacer * 1.5,
   "5":$spacer * 3,
 );
-
-
-
