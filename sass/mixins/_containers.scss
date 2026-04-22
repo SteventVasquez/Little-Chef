@@ -1,0 +1,137 @@
+@use "sass:map";
+@use "../variables" as v;
+// @use "./breakpoints" as bp;
+
+
+@mixin make-container {
+
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: v.$container-padding-x;
+    padding-left: v.$container-padding-x;
+
+}
+
+@mixin generate-containers {
+    .container,
+    .container-fluid,
+    .container-sm,
+    .container-md,
+    .container-lg,
+    .container-xl,
+    .container-xxl{
+        @include make-container;
+    }
+
+    .container-fluid{
+        max-width: 100%;
+    }
+
+    .container {
+        @each $bp, $width in v.$container-max-widths {
+            @media (min-width: map.get(v.$grid-breakpoints, $bp)){
+                max-width: $width;
+            }
+        }
+    }
+
+    .container-sm{
+        @each $bp, $width in v.$container-max-widths{
+            @if $bp == sm or
+                $bp == md or 
+                $bp == lg or 
+                $bp == xl or 
+                $bp == xxl {
+                
+                @media (min-width: map.get(v.$grid-breakpoints, $bp)){
+                    max-width: $width;
+                }
+            }
+        }
+    }
+
+
+    .container-md{
+        @each $bp, $width in v.$container-max-widths{
+            @if $bp != sm{
+                @media (min-width:map.get(v.$grid-breakpoints, $bp)){
+                    max-width: $width;
+                }
+            }
+        }
+
+    }
+
+    .container-lg{
+        @each $bp, $width in v.$container-max-widths{
+            @if $bp == lg or $bp == xl or $bp == xxl{
+                @media (min-width:map.get(v.$grid-breakpoints, $bp)){
+                    max-width: $width;
+                }
+            }
+        }
+
+    }
+
+    .container-xxl{
+        @media (min-width: map.get(v.$grid-breakpoints, xxl)){
+            max-width: map.get(v.$container-max-widths, xxl);
+        }
+
+    }
+}
+
+/*@media (min-width: map-get(v.$grid-breakpoints, xxl)) {
+      max-width: map-get(v.$container-max-widths, xxl);
+    }
+  }*/
+// @mixin generar-containers{
+//     .container-fluid {
+//         width: 100%;
+//         padding-left: v.$container-padding;
+//         padding-right: v.$container-padding;
+//         margin-right: auto;
+//         margin-left: auto;
+//     }
+
+//     .container{
+//         width: 100%;
+//         padding-left: v.$container-padding;
+//         padding-right: v.$container-padding;
+//         margin-left: auto;
+//         margin-right: auto;
+//     }
+
+//     @each $bp, $min in v.$grid-breakpoints{
+
+//         @if $bp != xs{
+//             .container-#{$bp}{
+//                 width: 100%;
+//                 padding-left: v.$container-padding;
+//                 padding-right: v.$container-padding;
+//                 margin-left: auto;
+//                 margin-right: auto;
+//             }
+
+//             @include bp.media-up($bp){
+//                 .container-#{$bp}{
+//                     max-width: map.get(v.$container-max-widths, $bp);
+//                 }
+//             }
+//         }
+//     }
+
+//     @each $bp, $min in v.$grid-breakpoints{
+//         @if map.has-key(v.$container-max-widths, $bp){
+//             @include bp.media-up($bp){
+//                 .container{
+//                     max-width: map.get(v.$container-max-widths, $bp);
+//                 }
+//             }
+//         }
+//     }
+
+
+
+// }

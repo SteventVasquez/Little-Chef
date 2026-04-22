@@ -22,29 +22,33 @@ $theme-colors: (
 );
 
 //variables layout
-
+//en px los valores de cuadricula
+//puntos de quiebre pantalla
 $grid-breakpoints: (
+  xs: 0px,
   sm: 576px,
   md:768px,
   lg:992px,
   xl:1200px,
-  xxl:1440px,
-);
-
-//variables sistema de columnas
-
-$grid-columns: 12;
-$gutter-width: 16px;//espacio entre columnas
-//tamaño de contenedores
-$container-max-widths:(
-  sm:540px,
-  md:720px,
-  lg:960px,
-  xl:1140px
   xxl:1400px,
 );
+
+
+//tamaño de contenedores
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1400px,
+);
  //padding de los containers
-$c-padding: 25px;
+$container-padding: 1rem;
+
+//variables de sistema de columnas
+$grid-columns: 12; // anchos en porcentaje de cada columna individual
+$gutter-width: 1.5rem; //espaciado entre columnas
+$grid-row-columns: 6; 
 
 //espaciados predeterminados para margenes y paddings
 $spacer: 1rem;
@@ -52,22 +56,10 @@ $spacers:(
   "0":0,
   "1":$spacer * .25,
   "2":$spacer * .5,
-  "3":$spacer
+  "3":$spacer,
   "4":$spacer * 1.5,
   "5":$spacer * 3,
 );
 
-// Grid Breakpoints
-$grid-breakpoints: (
-  sm: 576px,
-  md: 768px,
-  lg: 992px,
-  xl: 1200px,
-  xxl: 1400px,
-);
 
-//variables de sistema de columnas
-$grid-columns: 12; // Número de columnas
-$gutter-width: 1.5rem; // Espaciado entre columnas
-$grid-row-columns:  6; // Número de columnas en el grid-row
 
