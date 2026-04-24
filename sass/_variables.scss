@@ -1,30 +1,29 @@
-// Paleta de Remy
-$remy-blue: #5C7594;   // Su pelaje principal (Azul grisáceo)
-$remy-gray: #8A96A8;   // Luces de su pelaje
-$remy-pink: #F2A2AE;   // Nariz, orejas y patitas
-$remy-light: #E8ECEF;  // El blanco roto de su gorrito de chef
-
-// Paleta de Linguini
-$linguini-hair: #C65A31;  // Cabello rojo/cobrizo (ideal para un $warning o $secondary)
-$linguini-skin: #F5D3C4;  // Tono de piel cálido
-$linguini-apron: #D9D9D9; // El gris claro de su delantal manchado
-$linguini-pants: #4A5568; // El pantalón de pata de gallo
-
-// Paleta de Colette
-$colette-dark: #2C2630;   // Su cabello oscuro (casi negro con tintes ciruela)
-$colette-jacket: #4A4650; // El gris oscuro de las chaquetas de cocina
-$colette-red: #8B2C38;    // Sus labios y detalles (perfecto para tu $danger)
-
-// Paleta de Ego
-$ego-suit: #1C1E20;   // El negro grafito de su traje (excelente para tu $dark)
-$ego-skin: #D2D5D9;   // Su piel pálida casi fantasmal
-$ego-plum: #4B2E39;   // El color de su bufanda / interior de su oficina
-
-// Paleta Culinaria (Gusteau's)
-$gusteau-gold: #D4AF37;   // El dorado de los letreros y las ollas
-$gusteau-copper: #B87333; // Las ollas de cobre de la cocina
-$ratatouille-veg: #6B8E23; // El verde del calabacín y hierbas (perfecto para $success)
-$ratatouille-sauce: #B23A22; // El rojo anaranjado de la salsa de tomate
+$personajes:(
+  "remy":(
+    base: #5C7594,
+    hover: #F2A2AE,
+    fondo: #E8ECEF,
+    letra: #2D2926
+  ),
+  "linguini":(
+    base: #4A5568,
+    hover:#C65A31,
+    fondo:#D9D9D9,
+    letra: #2D2926
+  ),
+  "collete":(
+    base: #2C2630,
+    hover:#8B2C38,
+    fondo: #F9F9F2,
+    letra: #2D2926
+  ),
+  "ego":(
+    base: #1C1E20,
+    hover: #4B2E39,
+    fondo: #D2D5D9,
+    letra: #000 
+  ),
+);
 
 //variables layout
 //en px los valores de cuadricula
