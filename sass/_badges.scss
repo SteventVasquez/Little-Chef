@@ -1,0 +1,43 @@
+@use 'variables' as *;
+@use 'fonts' as *;
+@use 'sass:map';
+
+.badge{
+    display: flex;
+    padding: 0.35rem 0.65rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 4px;
+    font-family: $font-poppins;
+}
+
+.badge-pill{
+    border-radius: 50em;
+    padding-right: 0.8em;
+    padding-left: 0.8em;
+}
+
+$colores-badge: (
+    "primario": #0d6efd,
+    "exito": #198754,
+    "advertencia": #ffc107,
+    "peligro": #dc3545
+);
+
+@each $nombre, $color in $colores-badge{
+    .badge-#{$nombre}{
+        background-color: $color;
+
+        @if $nombre == "advertencia"{
+            color: #212526;
+        }
+        @else{
+            color: #ffffff;
+        }
+
+    }
+}
