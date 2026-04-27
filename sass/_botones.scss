@@ -1,22 +1,96 @@
 @use 'fonts' as *;
 @use 'variables' as *;
-@use 'sass:color';
+@use 'sass:map';
+
 .btn{
     display: inline-block;
     font-family: $font-playfair;
-    font-weight: 600;
+    font-weight: bold;
     text-align: center;
     text-decoration: none;
-    border-radius: 8px;
-    transition: all 0.3s ease;
+    padding: 0.75rem 1.5rem;
     cursor: pointer;
+    transition: all 0.3s ease;
 
-    &:disabled{
-        opacity: 0.6;
-        cursor: not-allowed;
-        pointer-events: none;
+    &:active{
+        transform: scale(0.95);
     }
 }
+
+@each $nombre, $paleta in $personajes{
+
+    //DISEÑO PRINCIPAL
+    $base: map.get($paleta, base);
+    $hover: map.get($paleta, hover);
+    $fondo: map.get($paleta, fondo);
+    $letra: map.get($paleta, letra);
+
+    .btn-#{$nombre}-principal{
+        background-color: $base;
+        color: $fondo;
+        border: 2px solid $base;
+
+        &:hover{
+            background-color: $hover;
+            color: $letra;
+            border-color: $hover;
+        }
+    }
+
+    .btn-#{$nombre}-inverso{
+        background-color: $hover;
+        color: $fondo;
+        border: 2px solid $hover;
+
+        &:hover{
+            background-color: $base;
+            border-color: $base;
+            color: $fondo;
+        }
+    }
+
+    .btn-#{$nombre}-outline{
+        background-color: transparent;
+        color: $base;
+        border: 2px solid $base;
+        
+
+        &:hover{
+            background-color: $base;
+            color: $fondo;
+        }
+    }
+
+    .btn-#{$nombre}-elegante{
+        background-color: $fondo;
+        color: $base;
+        border: 2px solid transparent;
+
+        &:hover{
+            background-color: $base;
+            color: $fondo;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //pequeño
 .btn-sm{
     padding: 0.5rem 1rem;
@@ -31,33 +105,4 @@
 .btn-lg{
     padding: 1rem 2rem;
     font-size: 1.25rem;
-}
-
-@each $nombre, $color in $theme-colors{
-    .btn-#{$nombre}{
-        background-color: $color;
-        border: 2px solid $color;
-        color: $light;
-
-        &:hover{
-            background-color: color.scale($color, $lightness: -10%);
-            border-color: color.scale($color, $lightness: -10%);
-        }
-
-        &:active{
-            transform: scale(0.98);
-        }
-    }
-    .btn-outline-#{$nombre}{
-        background-color: transparent;
-        color: $color;
-        border: 2px solid $color;
-        &:hover{
-            background-color: $color;
-            color: $light;
-        }
-            &:active{
-                transform: scale(0.98);
-            }
-    }
 }
