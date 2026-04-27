@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/littlechefLibrary.css">
+    <title>Formulario</title>
+</head>
+<body>
+    <h2>1. Formulario Temático Estándar</h2>
+<form>
+    <div class="form-group">
+        <label class="form-label" for="nombreRemy">Nombre del platillo</label>
+        <input type="text" class="form-control form-control-remy" id="nombreRemy" placeholder="Ej. Ratatouille">
+    </div>
+
+    <div class="form-group">
+        <label class="form-label" for="selectRemy">Categoría</label>
+        <select class="form-select form-select-remy" id="selectRemy">
+            <option>Entrada</option>
+            <option>Plato Principal</option>
+            <option>Postre</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <div class="form-check">
+            <input class="form-check-input form-check-input-remy" type="checkbox" id="checkRemy">
+            <label class="form-check-label" for="checkRemy">Receta secreta</label>
+        </div>
+    </div>
+</form>
+
+<h2>2. Formulario Estilo Tarjeta Oscura</h2>
+
+<div class="caja-formulario caja-formulario-ego" >
+    
+    <h2 class="titulo-formulario">Formulario Emocional</h2>
+
+    <form>
+        <div class="form-group">
+            <label class="form-label">Nombre:</label>
+            <input type="text" class="form-control" placeholder="Tu nombre completo">
+        </div>
+
+        <div class="form-group">
+            <label class="form-label">Correo electrónico:</label>
+            <input type="email" class="form-control" placeholder="ejemplo@correo.com">
+        </div>
+
+        <div class="form-group">
+            <label class="form-label">Contraseña:</label>
+            <input type="password" class="form-control" placeholder="••••••••">
+        </div>
+
+        <div class="form-group">
+            <label class="form-label">Mensaje:</label>
+            <textarea class="form-control" rows="3" placeholder="Escribe tu mensaje aquí..."></textarea>
+        </div>
+
+        <div class="form-group">
+            <label class="form-label">Selecciona una opción:</label>
+            <select class="form-select">
+                <option>-- Selecciona --</option>
+                <option>Opción 1</option>
+                <option>Opción 2</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label class="form-label">Sube un archivo:</label>
+            <input type="file" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <div class="form-check">
+                <input class="form-check-input form-check-input-ego" type="checkbox" id="checkTerminos">
+                <label class="form-check-label" for="checkTerminos">Acepto los términos del crítico</label>
+            </div>
+        </div>
+
+        <div class="botones-dobles">
+            <button type="submit" class="btn btn-ego">Enviar</button>
+            <button type="reset" class="btn btn-ego">Limpiar</button>
+        </div>
+    </form>
+</div>
+
+<h2>3. Estados de Validación</h2>
+<form >
+    
+    <div class="form-group">
+        <label class="form-label" for="inputValido">Usuario (Válido)</label>
+        <input type="text" class="form-control es-valido" id="inputValido" value="Chef_Estrella_22">
+    </div>
+
+    <div class="form-group">
+        <label class="form-label" for="inputInvalido">Contraseña (Inválido)</label>
+        <input type="password" class="form-control es-invalido" id="inputInvalido" placeholder="La contraseña es incorrecta">
+    </div>
+
+    <div class="form-group">
+        <label class="form-label" for="selectValido">Ingrediente principal</label>
+        <select class="form-select es-valido" id="selectValido">
+            <option selected>Tomates frescos</option>
+            <option>Papas</option>
+        </select>
+    </div>
+</form>
+
+<div class="caja-formulario caja-formulario-ego" style="max-width: 400px;">
+    <h2 class="titulo-formulario">Mi Formulario</h2>
+
+    <form>
+        <div class="form-group">
+            <label class="form-label">Usuario:</label>
+            <input type="text" class="form-control" placeholder="Escribe aquí...">
+        </div>
+
+        <div class="form-group">
+            <label class="form-label">Contraseña:</label>
+            <input type="password" class="form-control es-invalido" placeholder="Contraseña incorrecta">
+        </div>
+
+        <div class="botones-dobles">
+            <button type="submit" class="btn btn-ego">Enviar</button>
+        </div>
+    </form>
+</div>
+</body>
+</html>

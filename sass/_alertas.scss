@@ -1,0 +1,41 @@
+@use 'variables' as *;
+@use 'fonts' as *;
+@use 'sass:map';
+
+
+.alert{
+    position: relative;
+    padding: 1rem 1.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-family: $font-poppins;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+}
+
+$colores-semanticos:(
+    "exito": (fondo: #d4edda, borde: #c3e6cb, texto: #155724),
+    "peligro": (fondo: #f8d7da, borde: #f5c6cb, texto: #721c24),
+    "advertencia": (fondo: #fff3cd, borde: #ffeeba, texto: #856404),
+    "informacion": (fondo: #d1ecf1, borde: #bee5eb, texto: #0c5460)
+);
+
+@each $estado, $tonos in $colores-semanticos{
+
+    $fondo: map.get($tonos, fondo);
+    $border: map.get($tonos, borde);
+    $text: map.get($tonos, texto);
+
+    .alert-#{$estado}{
+        background-color: $fondo;
+        border-color: $border;
+        color: $text;
+
+        strong{
+            font-weight: 700;
+        }
+    }
+    
+}
