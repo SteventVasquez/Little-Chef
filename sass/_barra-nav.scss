@@ -69,6 +69,14 @@
     }
 }
 
+.navbar-sticky{
+    position: sticky;
+    top: 0;
+    z-index: 1050;
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
 @media (max-width: 768px) {
     .navbar .nav-links {
         position: absolute;
