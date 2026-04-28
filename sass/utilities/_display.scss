@@ -1,0 +1,26 @@
+@use "../variables" as v;
+@use "sass:map";
+
+
+/*base*/
+
+.d-none{
+    display: none;
+}
+
+.d-block{
+    display: block;
+}
+
+@each $name, $value in v.$grid-breakpoints {
+    @media(min-width:$value){
+        .d-#{$name}-none{
+            display: none;
+        }
+        .d-#{$name}-block{
+            display: block;
+        }
+        
+    }
+    
+} 
