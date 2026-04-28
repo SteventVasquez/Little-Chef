@@ -160,12 +160,13 @@
 @each $nombre, $paleta in $personajes {
     $base: map.get($paleta, base); 
     .caja-formulario-#{$nombre} {
-        background: linear-gradient(to bottom, darken($base, 15%), darken($base, 2%));
+        background-color: #1e1e1e; 
+        border-top: 5px solid $base; 
+        box-shadow: 0 10px 25px rgba($base, 0.15);
     }
 }
 
 //estados de validacion (valido/invalido)
-
 .form-control.es-valido,
 .form-select.es-valido {
 
