@@ -1,0 +1,89 @@
+@use 'variables' as *;
+@use 'fonts' as *;
+@use 'sass:map';
+
+.sidebar {
+    
+    position: sticky; 
+    top: 0; 
+    height: 100vh; 
+
+    
+    background-color: #f8f9fa;
+    border-right: 1px solid #e0e0e0;
+    overflow-y: auto; 
+    font-family: $font-poppins;
+    padding-top: 1.5rem;
+    z-index: 1000;
+
+    .sidebar-header {
+        padding: 0 1.5rem 1.5rem 1.5rem;
+        font-size: 1.25rem;
+        font-weight: 800;
+        color: #2D2926;
+        border-bottom: 1px solid #e0e0e0;
+        margin-bottom: 1rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .sidebar-menu {
+        list-style: none; 
+        padding: 0;
+        margin: 0;
+    }
+
+    .sidebar-link {
+        display: block; 
+        padding: 0.75rem 1.5rem;
+        color: #495057;
+        text-decoration: none; 
+        font-weight: 500;
+        transition: all 0.2s ease;
+
+        &:hover {
+            background-color: #e9ecef; 
+            color: #2D2926;
+        }
+
+        &.activo {
+            font-weight: 700;
+            background-color: rgba(0, 0, 0, 0.05);
+            border-left: 4px solid #2D2926; 
+        }
+    }
+}
+
+
+//LA PIEL (Colores Temáticos)
+
+@each $nombre, $paleta in $personajes {
+    
+    $base: map.get($paleta, base);
+    $fondo: map.get($paleta, fondo);
+
+    .sidebar-#{$nombre} {
+        background-color: $base;
+        border-right: none;
+
+        .sidebar-header {
+            color: $fondo;
+            border-bottom-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .sidebar-link {
+            color: rgba($fondo, 0.8); 
+
+            &:hover {
+                background-color: rgba(255, 255, 255, 0.1);
+                color: $fondo; 
+            }
+
+            &.activo {
+                background-color: rgba(255, 255, 255, 0.2);
+                color: $fondo;
+                border-left-color: $fondo;
+            }
+        }
+    }
+}
