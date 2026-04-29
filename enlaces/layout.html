@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/littlechefLibrary.css">
+    <title>Layout</title>
+
+    <style>
+        .sidebar-section-title{
+        padding: .8rem 1.5rem .3rem;
+        margin-top: 1rem;
+
+     p{
+        margin: 0;
+        font-size: .85rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        opacity: .7;
+        }
+
+        .table-responsive{
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+    }
+    </style>
+</head>
+<body>
+    <!--NAVBAR-->
+    <header>
+        <nav class="navbar navbar-remy">
+            <a href="#" class="nav-logo">
+                <img src="/img/remyLogo.png" alt="remy">
+            </a>
+            <input type="checkbox" id="menu-toggle" class="nav-checkbox">
+            <label for="menu-toggle" class="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </label>
+            <ul class="nav-links">
+                <li><a href="/index.html">Inicio</a></li>
+                <li><a href="#">Documentacion</a></li>
+                <li><a href="#">GitHub</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container-fluid">
+
+    <div class="row">
+        <!--SIDEBAR-->
+        <aside class="col-12 col-md-4 col-lg-3 col-xl-2 p-0">
+            <nav class="sidebar sidebar-remy">
+                <div class="sidebar-header">Documentacion</div>
+                <ul class="sidebar-menu">
+                    <div class="sidebar-section-title">
+                        <p>Layout</p>
+                    </div>
+                    <li><a href="#clase-container"  class="sidebar-link">Contenedores</a></li>
+                    <li><a href="./alertas.html"  class="sidebar-link">Alertas</a></li>
+                    <li><a href="./enlaces/badges.html" class="sidebar-link">Badges</a></li>
+                    <li><a href="./enlaces/botones.html" class="sidebar-link">Botones</a></li>
+                    <li><a href="./enlaces/formularios.html" class="sidebar-link">Formularios</a></li>
+                    <li><a href="./enlaces/navbar.html" class="sidebar-link">Navbars</a></li>
+                    <li><a href="./enlaces/tablas.html" class="sidebar-link">Tablas</a></li>
+                    <li><a href="./enlaces/tarjetas.html" class="sidebar-link">Tarjetas</a></li>
+
+                </ul>
+            </nav>
+    
+        </aside>
+
+        <main class="col-12 col-md-8 col-lg-9 col-xl-10 p-4">
+            
+            <header>
+                <div class="container bg-light text-center border py-5" >
+                    <h1 class="font-remy ">Documentación Little-Chef</h1>
+                    <p class="font-cuisini fs-5 mt-1">Crea interfaces responsivas con componentes reutilizables y un sistema grid flexible.</p>
+                </div>
+            </header>
+            <!--Inicio container-->
+            <section class="mb-4">
+                <h2 id="clase-container" class="font-colette mb-1">Contenedores</h2>
+                <p class="font-cuisini fs-5">Los contenedores son un componente fundamental de diseño basico en Little Chef library. Estos se usan
+                    para rellenar, contener y centrar contenido en ellos.
+                </p><br>
+                    <p class="font-cuisini fs-5">Little Chef utiliza dos contenedores diferentes:</p>
+                    <li class="ml-4 font-cuisini fs-5"><code class="text-danger">.container</code>, que establece un <code class="text-danger">max-width</code> en cada punto de interrupción.</li>
+                    <li class="ml-4 font-cuisini fs-5"><code class="text-danger">.container-fluid</code>, que es <code class="text-danger">width: 100%</code> en todos los puntos de interrupción.</li><br>
+                   
+                    <div class="container table-responsive">
+                        <table class="table table-hover table-remy ">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>small &ge;576px </th>
+                                    <th>medium &ge;768px</th>
+                                    <th>large &ge;992px</th>
+                                    <th>x-large &ge;1200px</th>
+                                    <th>xx-large &ge;1400px</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><code class="text-danger">.container</code></td>
+                                    <td>540 px</td>
+                                    <td>720 px</td>
+                                    <td>960 px</td>
+                                    <td>1140 px</td>
+                                    <td>1400 px</td>
+                                </tr>
+                                <tr>
+                                    <td><code class="text-danger">.container-fluid</code></td>
+                                    <td>100%</td>
+                                    <td>100%</td>
+                                    <td>100%</td>
+                                    <td>100%</td>
+                                    <td>100%</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                <h2 id="clase-container" class="font-colette mb-2 mt-2">Contenedor predeterminado</h2>
+                <p class="font-cuisini fs-5">La clase predetrminada <code>.conatiner</code> es un contenedor adaptable de ancho fijo, lo que significa que
+                    <code>max-width</code> cambia en cada breakpoint. Se utiliza para centrar contenido y limitar su ancho según el tipo de pantalla
+                </p><br>
+                <div class="example-block mb-5">
+                    <div class="source-box border border-top-0 bg-dark ">
+                        <pre><code class="text-light">&lt;div class="container"&gt; Tu contenido aqui &lt;/div&gt;</code></pre>
+                    </div>
+                </div>
+
+                <h2 id="clase-container" class="font-colette mb-2 mt-2">Contenedor fluido</h2>
+                <p class="font-cuisini fs-5"><code>.conatiner</code> ocupa el 100% del ancho disponible, abarca todo el ancho de la ventana en todos los breakpoints. Ideal si necesitas
+                    que tu contenido ocupe el 100% del ancho disponible en todos los dispositivos.
+                </p><br>
+                <div class="example-block mb-5">
+                    <div class="source-box border border-top-0 bg-dark ">
+                        <pre><code class="text-light">&lt;div class="container-fluid"&gt; Tu contenido aqui &lt;/div&gt;</code></pre>
+                    </div>
+                </div>
+                
+
+            </section>
+            
+            
+            
+
+        </main>
+    </div>
+</div>
+<footer class="container-fluid  font-cuisini bg-dark text-light fs-4 text-center ">
+    Little-Chef &copy; 2026. Todos los derechos reservados.
+
+</footer>
+
+ 
+</body>
+</html>
