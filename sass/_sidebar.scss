@@ -3,25 +3,21 @@
 @use 'sass:map';
 
 .sidebar {
-    
-    position: sticky; 
-    top: 0; 
-    height: 100vh; 
-
-    
-    background-color: #f8f9fa;
-    border-right: 1px solid #e0e0e0;
+    position: sticky;
+    top: 90px; 
+    height: calc(100vh - 90px); 
     overflow-y: auto; 
+    background-color: #f8f9fa;
     font-family: $font-poppins;
     padding-top: 1.5rem;
-    z-index: 1000;
+    z-index: 99; 
 
     .sidebar-header {
-        padding: 0 1.5rem 1.5rem 1.5rem;
+        padding: 0 1.5rem 1rem 1.5rem;
         font-size: 1.25rem;
         font-weight: 800;
         color: #2D2926;
-        border-bottom: 1px solid #e0e0e0;
+        border-bottom: 1px solid rgba(0,0,0,0.1);
         margin-bottom: 1rem;
         text-transform: uppercase;
         letter-spacing: 1px;
@@ -42,7 +38,7 @@
         transition: all 0.2s ease;
 
         &:hover {
-            background-color: #e9ecef; 
+            background-color: rgba(0,0,0,0.05); 
             color: #2D2926;
         }
 
@@ -53,10 +49,7 @@
         }
     }
 }
-
-
-//LA PIEL (Colores Temáticos)
-
+//Estilizacion
 @each $nombre, $paleta in $personajes {
     
     $base: map.get($paleta, base);
