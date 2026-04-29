@@ -1,6 +1,7 @@
 @use "../variables" as v;
 
 @use "../fonts" as f;
+@use 'sass:map';
 
 
 @each $name, $family in f.$font-families{
@@ -53,5 +54,12 @@
 @each $name, $color in v.$theme-colors{
     .bg-#{$name}{
         background-color: $color;
+    }
+}
+@each $nombre, $paleta in v.$personajes {
+    $base: map.get($paleta, base);
+    
+    .bg-#{$nombre} {
+        background-color: $base !important;
     }
 }

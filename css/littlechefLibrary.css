@@ -1498,9 +1498,10 @@ select {
 }
 
 .sidebar {
+  align-self: flex-start;
   position: sticky;
-  top: 90px;
-  height: calc(100vh - 90px);
+  top: 80px;
+  height: calc(100vh - 80px);
   overflow-y: auto;
   background-color: #f8f9fa;
   font-family: "Poppins", sans-serif;
@@ -2614,6 +2615,22 @@ select {
 
 .bg-dark {
   background-color: #2D2926;
+}
+
+.bg-remy {
+  background-color: #5C7594 !important;
+}
+
+.bg-linguini {
+  background-color: #4A5568 !important;
+}
+
+.bg-collete {
+  background-color: #2C2630 !important;
+}
+
+.bg-ego {
+  background-color: #1C1E20 !important;
 }
 
 /*# sourceMappingURL=littlechefLibrary.css.map */
