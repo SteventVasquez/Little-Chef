@@ -6,7 +6,6 @@
 @mixin make-container {
 
     width: 100%;
-    box-sizing: border-box;
     margin-right: auto;
     margin-left: auto;
     padding-right: calc(v.$gutter-width / 2);

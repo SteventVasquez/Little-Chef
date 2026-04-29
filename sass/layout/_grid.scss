@@ -1,4 +1,5 @@
-@use "./mixins/grid" as mixin-grid;
+@use "../mixins/grid" as mixin-grid;
+@use "sass:map";
 
 @include mixin-grid.generate-grid;
 

@@ -1,0 +1,29 @@
+
+.example-block{
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.preview-box{
+    border-radius: 8px 8px 0 0;
+    padding: 2rem;
+}
+
+.source-box{
+    padding: 1rem;
+    border-radius: 0 0 8px 8px;
+}
+
+.source-box pre{
+    margin:0;
+    width: 100%;
+    white-space: pre-wrap;
+    word-break: break-word;
+    text-align: left;
+}
+
+.source-box code{
+    display: block;
+    width: 100%;
+
+}
