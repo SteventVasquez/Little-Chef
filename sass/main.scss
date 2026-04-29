@@ -2,8 +2,8 @@
 @use 'variables';
 @use 'fonts';
 //layout
-@use 'grid';
-@use 'containers';
+@use 'layout/grid';
+@use 'layout/containers';
 @use 'utilidades';
 
 //componentes
