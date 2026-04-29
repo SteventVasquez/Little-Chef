@@ -7,26 +7,97 @@
     <title>Alertas</title>
 </head>
 <body>
-    <div>
+    <!--NAVBAR-->
+    <header>
+        <nav class="navbar navbar-linguini">
+            <a href="#" class="nav-logo">
+                <img src="/img/linguiniLogo.png" alt="remy">
+            </a>
+            <input type="checkbox" id="menu-toggle" class="nav-checkbox">
+            <label for="menu-toggle" class="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </label>
+            <ul class="nav-links">
+                <li><a href="./index.html">Inicio</a></li>
+                <li><a href="./enlaces/doc.html">Documentacion</a></li>
+                <li><a href="#">GitHub</a></li>
+            </ul>
+        </nav>
+    </header>
 
-        <!--Exito-->
-        <div class="alert alert-exito">
-            <strong>!Platillo servido!</strong> La receta se a guardado en tu recetario correctamente.
-        </div>
-        <!--Informacion-->
-        <div class="alert alert-informacion">
-            <strong>Nota del Chef:</strong> Recuerda precaletar el horno antes de meter la masa.
-        </div>
-        <!--Advertencia-->
-        <div class="alert alert-advertencia">
-            <strong>¡Cuidado!</strong> Ten quedan pocos ingredientes en el invertario.
-        </div>
-        <!--Peligro-->
-        <div class="alert alert-peligro">
-            <strong>Error critico:</strong> Se ha quemado la sopa. Intenta cocinarla de nuevo.
-        </div>
-       
-       
+    <div class="container-fluid px-0">
+
+    <div class="row">
+        <!--SIDEBAR-->
+        <aside class="col-12 col-md-4 col-lg-3 col-xl-2 p-0">
+            <nav class="sidebar sidebar-remy">
+                <div class="sidebar-header">Documentacion</div>
+                <ul class="sidebar-menu">
+                    <li><a href="./enlaces/alertas.html"  class="sidebar-link">Alertas</a></li>
+                    <li><a href="./enlaces/badges.html" class="sidebar-link">Badges</a></li>
+                    <li><a href="./enlaces/botones.html" class="sidebar-link">Botones</a></li>
+                    <li><a href="./enlaces/formularios.html" class="sidebar-link">Formularios</a></li>
+                    <li><a href="./enlaces/navbar.html" class="sidebar-link">Navbars</a></li>
+                    <li><a href="./enlaces/tablas.html" class="sidebar-link">Tablas</a></li>
+                    <li><a href="./enlaces/tarjetas.html" class="sidebar-link">Tarjetas</a></li>
+
+                </ul>
+            </nav>
+    
+        </aside>
+
+        <main class="col-12 col-md-8 col-lg-9 col-xl-10 p-4">
+            <!--Doc Alertas-->
+            <section class="mb-4">
+                <h1 class="font-cuisini mb-1">Alertas</h1>
+                <p class="font-recipe fs-5">Ejemplos de cómo usar las alertas en tu proyecto.</p>
+            </section>
+            
+            <section class="example-block mb-5">
+
+                <div class="preview-box border bg-dark p-4">
+                    <!--Exito-->
+                    <div class="alert alert-exito">
+                    ¡Platillo servido! La receta se a guardado en tu recetario correctamente.
+                    </div>
+                    <!--Informacion-->
+                    <div class="alert alert-informacion">
+                    Nota del Chef: Recuerda precalentar el horno antes de meter la masa.
+                    </div>
+                    <!--Advertencia-->
+                    <div class="alert alert-advertencia">
+                    ¡Cuidado! Ten quedan pocos ingredientes en el invertario.
+                    </div>
+                    <!--Peligro-->
+                    <div class="alert alert-peligro">
+                    Error critico: Se ha quemado la sopa. Intenta cocinarla de nuevo.
+                    </div>
+                </div>
+                <div class="source-box border border-top-0 bg-dark ">
+                <pre><code class="text-light">&lt;div class="alert alert-exito"&gt;Platillo servido! La receta se ha guardado en tu recetario correctamente.&lt;/div&gt;
+
+&lt;div class="alert alert-informacion"&gt;Nota del Chef: Recuerda precalentar el horno antes de meter la masa.&lt;/div&gt;
+
+&lt;div class="alert alert-advertencia"&gt;Nota del Chef: Recuerda precalentar el horno antes de meter la masa.&lt;/div&gt;
+
+&lt;div class="alert alert-peligro"&gt;Error critico: Se ha quemado la sopa. Intenta cocinarla de nuevo.&lt;/div&gt;
+
+                </code></pre>
+                </code></pre>
+                
+            </div>
+            </section>
+
+        </main>
     </div>
+</div>
+<footer class="container-fluid  font-cuisini bg-dark text-light fs-4 text-center ">
+    Little-Chef &copy; 2026. Todos los derechos reservados.
+
+</footer>
+
+ 
 </body>
 </html>
