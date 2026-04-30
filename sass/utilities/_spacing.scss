@@ -59,3 +59,11 @@
 
 
 }
+
+//generar clase .gap-n
+@each $key, $value in v.$spacers{
+    .gap-#{$key}{
+        gap: $value !important;
+    }
+
+}
