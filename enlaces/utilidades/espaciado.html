@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/littlechefLibrary.css">
+    <title>Espaciado - Little Chef</title>
+</head>
+<body>
+    <!--NAVBAR-->
+    <header class="navbar-sticky">
+        <nav class="navbar navbar-remy">
+            <a href="#" class="nav-logo">
+                <img src="/img/remyLogo.png" alt="remy">
+            </a>
+            <input type="checkbox" id="menu-toggle" class="nav-checkbox">
+            <label for="menu-toggle" class="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </label>
+            <ul class="nav-links">
+                <li><a href="/index.html">Inicio</a></li>
+                <li><a href="#">Documentacion</a></li>
+                <li><a href="https://github.com/SteventVasquez/Little-Chef" target="_blank">GitHub</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container-fluid">
+        <div class="row">
+            <!--SIDEBAR-->
+            <aside class="col-12 col-md-4 col-lg-3 col-xl-2 p-0">
+                <nav class="sidebar sidebar-remy">
+                    <div class="sidebar-header font-remy">Documentación</div>
+                    <ul class="sidebar-menu font-recipe">
+                        <div class="sidebar-section-title">
+                            <p>Layout</p>
+                        </div>
+                        <li><a href="../layout.html#clase-container"  class="sidebar-link">Contenedores</a></li>
+                        <li><a href="#grid" class="sidebar-link">Grid</a></li>
+                        <li><a href="alertas.html" class="sidebar-link">Alertas</a></li>
+                        <li><a href="badges.html" class="sidebar-link">Badges</a></li>
+                        <li><a href="botones.html" class="sidebar-link">Botones</a></li>
+                        <li><a href="formularios.html" class="sidebar-link">Formularios</a></li>
+                        <li><a href="navbar.html" class="sidebar-link">Navbars</a></li>
+                        <li><a href="tablas.html" class="sidebar-link">Tablas</a></li>
+                        <li><a href="tarjetas.html" class="sidebar-link">Tarjetas</a></li>
+                        <div class="sidebar-section-title">
+                            <p>Utilidades</p>
+                        </div>
+                        <li><a href="texto.html" class="sidebar-link">Texto</a></li>
+                        <li><a href="espaciado.html" class="sidebar-link">Espaciado</a></li>
+                        <li><a href="backgrounds.html" class="sidebar-link">Backgrounds</a></li>
+                        <li><a href="bordes.html" class="sidebar-link">Bordes</a></li>
+                         <li><a href="shadows.html" class="sidebar-link">Sombras</a></li>
+                         
+                        
+                    </ul>
+                </nav>
+            </aside>
+
+            <main class="col-12 col-md-8 col-lg-9 col-xl-10 p-4">
+               
+
+
+                <section class="mb-4">
+                    <h1 class="font-remy mb-1">Espaciado y Distribución</h1>
+                    <p class="font-recipe fs-5 mb-4">En la cocina, la presentación lo es todo. Nuestras clases de espaciado te permiten
+                        controlar la distancia entre ingredientes (elementos) para que tu diseño tenga mejor aspecto visual.
+                    </p>
+                    <h2 class="font-remy mb-3">Margins y Paddings</h2>
+                    <p class="font-recipe mb-3 fs-5">Los paddings y margins predefinidos usan una medida estándar basada en <code class="text-danger">1rem</code>
+                        de donde tenemos las demás medidas.
+                    </p>
+                    <ul>
+                        <li class="ml-4 font-recipe fs-5"><code>0<span class="text-danger">-0rem</span></li>
+                        <li class="ml-4 font-recipe fs-5"><code>1<span class="text-danger">-0.25rem</span></li>
+                        <li class="ml-4 font-recipe fs-5"><code>2<span class="text-danger">-0.50rem</span></li>
+                        <li class="ml-4 font-recipe fs-5"><code>3<span class="text-danger">-1rem</span></li>
+                        <li class="ml-4 font-recipe fs-5"><code>4<span class="text-danger">-1.5rem</span></li>
+                        <li class="ml-4 font-recipe fs-5"><code>5<span class="text-danger">-3rem</span></li>
+                        
+                    </ul>
+
+                    <h2 class="font-remy mb-3 mt-3">Notación utilizada</h2>
+                    <p class="font-recipe mb-3 fs-5"> A continuación te explicamos la notación con la que se trabajo para los 
+                        nombres de clase respectivas a margins y paddings
+                    </p>
+                    <ul>
+                        <li class="ml-4 font-recipe fs-5"><code class="text-danger">m</code> - es la notación para <code class="fw-bold">margin</code> </li>
+                        <li class="ml-4 font-recipe fs-5"><code class="text-danger">p</code> - es la notación para <code class="fw-bold">padding</code> </li>
+                    </ul>
+                    <p class="font-recipe mt-3 fs-5">Donde los lados son:</p>
+                    <ul>
+                        <li class="ml-4 font-recipe fs-5"><code class="text-danger">t</code> - equivalente a colocar <code class="fw-bold">top</code> para clases que establecen <code class="fw-bold">margin-top</code> o <code class="fw-bold">padding-top</code></li>
+                        <li class="ml-4 font-recipe fs-5"><code class="text-danger">b</code> - equivalente a colocar <code class="fw-bold">bottom</code> para clases que establecen <code class="fw-bold">margin-bottom</code> o <code class="fw-bold">padding-bottom</code></li>
+                        <li class="ml-4 font-recipe fs-5"><code class="text-danger">l</code> - equivalente a colocar <code class="fw-bold">left</code> para clases que establecen <code class="fw-bold">margin-left</code> o <code class="fw-bold">padding-left</code></li>
+                        <li class="ml-4 font-recipe fs-5"><code class="text-danger">r</code> - equivalente a colocar <code class="fw-bold">right</code> para clases que establecen <code class="fw-bold">margin-right</code> o <code class="fw-bold">padding-right</code></li>
+                        <li class="ml-4 font-recipe fs-5"><code class="text-danger">x</code> - equivalente a colocar <code class="fw-bold">right</code> y <code class="fw-bold">left</code> aplica el espaciado en el eje horizontal del elemento.</li>
+                        <li class="ml-4 font-recipe fs-5"><code class="text-danger">y</code> - equivalente a colocar <code class="fw-bold">top</code> y <code class="fw-bold">bottom</code> aplica el espaciado en el eje vertical del elemento.</li>
+                    </ul>
+                </section>
+
+                <section class="example-block mb-5">
+                    <div class="preview-box border bg-light p-2">
+                    </div>
+                    <div class="source-box border border-top-0 bg-dark">
+                        <pre><code class="text-light">$spacer: 1rem;
+.mt-0 {
+  margin-top: 0;
+}
+
+.ml-1 {
+  margin-left: ($spacer * .25);
+}
+           
+.px-2 {
+  padding-left: ($spacer * .5);
+  padding-right: ($spacer * .5);
+}
+
+.p-3 {
+  padding: $spacer;
+}
+</code></pre>
+                    </div>
+                </section>
+                
+                <section class="example-block mb-5">
+                    <h2 class="font-remy mb-3">Espaciado entre elementos (Gap)</h2>
+                    <p class="font-recipe mb-3 fs-5">La propiedad <code class="text-danger">gap</code> define el espacio (la separación) entre los elementos 
+                        hijos de un contenedor flexible o de rejilla, sin añadir espacio en los bordes exteriores del contenedor.</p>
+                    <ul>
+                        <li class="ml-4 font-recipe fs-5"><code class="text-danger">.gap-{}</code>: Aplica un espacio uniforme tanto horizontal como verticalmente entre los elementos hijos.</li>
+                        <li class="ml-4 font-recipe fs-5">A diferencia de los márgenes, el <code class="text-danger">gap</code> solo se aplica  entre los elementos, lo que facilita el alineamiento perfecto con los bordes del contenedor padre.</li>
+                        <li class="ml-4 font-recipe fs-5">Para que esta clase te funcione, el contenedor debe tener una propiedad de diseño activa, como <code class="text-danger">display: flex</code>.</li>
+                        
+                    </ul>
+                    <div class="preview-box border bg-light font-recipe p-4">
+                        <div class="d-flex gap-3 bg-secondary p-3 rounded">
+                            <div class="bg-light p-2">Ingrediente 1</div>
+                            <div class="bg-light p-2">Ingrediente 2</div>
+                            <div class="bg-light p-2">Ingrediente 3</div>
+                    
+                        </div>
+                    </div>
+                    <div class="source-box border border-top-0 bg-dark ">
+                        <pre><code class="text-light">&lt;div class="d-flex gap-3 bg-secondary p-3 rounded"&gt;
+    &lt;div class="bg-light p-2"&gt;Ingrediente 1&lt;/div&gt;
+    &lt;div class="bg-light p-2"&gt;Ingrediente 2&lt;/div&gt;
+    &lt;div class="bg-light p-2"&gt;Ingrediente 3&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+    <footer class="font-cuisini bg-dark text-light fs-4 text-center ">
+        Little-Chef &copy; 2026. Todos los derechos reservados.
+    </footer>
+</body>
+
+</html>
