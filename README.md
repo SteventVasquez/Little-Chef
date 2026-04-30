@@ -32,9 +32,12 @@ Dado que este es un framework personalizado, puedes implementarlo de esta manera
 
 ## ✨ Características Principales
 
-* **🎨 Temas de Personajes:** Sistema de colores integrado a través de mapas SASS (`$personajes`). Usa clases utilitarias para aplicar las paletas de Remy, Ego y Collete.
+* **🎨 Temas de Personajes:** Sistema de colores integrado a través de mapas SASS (`$personajes`). Usa clases utilitarias para aplicar las paletas de Remy, Ego, Linguini y Collete.
+
 * **📱 Diseño Responsivo:** Sistema de grillas (Grid) basado en Flexbox adaptable a cualquier tamaño de pantalla.
+
 * **🧱 Componentes Modulares:** Estilos preconstruidos listos para usar, incluyendo un panel lateral fijo (Sticky Sidebar) para documentación.
+
 * **✒️ Tipografía Dinámica:** Sistema jerárquico de fuentes usando `Playfair Display` (clase `.font-remy`) para títulos elegantes y `Lato` (clase `.font-recipe`) para una lectura clara.
 
 ---
@@ -44,10 +47,15 @@ Dado que este es un framework personalizado, puedes implementarlo de esta manera
 El framework cuenta con una amplia variedad de elementos de interfaz:
 
 * **Botones:** Diferentes tamaños y variantes (Principal, Inverso, Outline, Elegante).
+
 * **Navbars:** Barras de navegación responsivas con menú de hamburguesa en CSS puro.
+
 * **Tarjetas (Cards):** Contenedores flexibles para mostrar contenido y reseñas.
+
 * **Badges:** Insignias dinámicas que se adaptan al elemento padre.
+
 * **Formularios:** Inputs, textareas y selects con bordes y enfoques temáticos.
+
 * **Tablas:** Estructuras de datos con estilos variantes según el personaje.
 
 ---
