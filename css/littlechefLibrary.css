@@ -1541,6 +1541,19 @@ select {
   border-left: 4px solid #2D2926;
 }
 
+.sidebar-section-title {
+  padding: 0.8rem 1.5rem 0.3rem;
+  margin-top: 1rem;
+}
+.sidebar-section-title p {
+  margin: 0;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: 0.7;
+}
+
 .sidebar-remy {
   background-color: #5C7594;
   border-right: none;
@@ -1682,6 +1695,12 @@ select {
 }
 .table-hover tbody tr:hover td {
   background-color: rgba(0, 0, 0, 0.05);
+}
+
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .table-remy thead {

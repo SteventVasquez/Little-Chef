@@ -50,6 +50,22 @@
         }
     }
 }
+//secciones
+.sidebar-section-title{
+        padding: .8rem 1.5rem .3rem;
+        margin-top: 1rem;
+
+     p{
+        margin: 0;
+        font-size: .85rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        opacity: .7;
+        } 
+    }
+
+
 //Estilizacion
 @each $nombre, $paleta in $personajes {
     
