@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/littlechefLibrary.css">
+    <title>Display - Little Chef</title>
+</head>
+<body>
+    <!--NAVBAR-->
+    <header class="navbar-sticky">
+        <nav class="navbar navbar-remy">
+            <a href="#" class="nav-logo">
+                <img src="/img/remyLogo.png" alt="remy">
+            </a>
+            <input type="checkbox" id="menu-toggle" class="nav-checkbox">
+            <label for="menu-toggle" class="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </label>
+            <ul class="nav-links">
+                <li><a href="/index.html">Inicio</a></li>
+                <li><a href="#">Documentacion</a></li>
+                <li><a href="https://github.com/SteventVasquez/Little-Chef" target="_blank">GitHub</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container-fluid">
+        <div class="row">
+            <!--SIDEBAR-->
+            <aside class="col-12 col-md-4 col-lg-3 col-xl-2 p-0">
+                <nav class="sidebar sidebar-remy">
+                    <div class="sidebar-header font-remy">Documentación</div>
+                    <ul class="sidebar-menu font-recipe">
+                        <div class="sidebar-section-title">
+                            <p>Layout</p>
+                        </div>
+                        <li><a href="../layout.html#clase-container"  class="sidebar-link">Contenedores</a></li>
+                        <li><a href="../layout.html#grid" class="sidebar-link">Grid</a></li>
+                        <div class="sidebar-section-title">
+                            <p>Componentes</p>
+                        </div>
+                        <li><a href="../alertas.html" class="sidebar-link">Alertas</a></li>
+                        <li><a href="../badges.html" class="sidebar-link">Badges</a></li>
+                        <li><a href="../botones.html" class="sidebar-link">Botones</a></li>
+                        <li><a href="../formularios.html" class="sidebar-link">Formularios</a></li>
+                        <li><a href="../navbar.html" class="sidebar-link">Navbars</a></li>
+                        <li><a href="../tablas.html" class="sidebar-link">Tablas</a></li>
+                        <li><a href="../tarjetas.html" class="sidebar-link">Tarjetas</a></li>
+                        <div class="sidebar-section-title">
+                            <p>Utilidades</p>
+                        </div>
+                        <li><a href="texto.html" class="sidebar-link">Texto</a></li>
+                        <li><a href="espaciado.html" class="sidebar-link">Espaciado</a></li>
+                        <li><a href="backgrounds.html" class="sidebar-link">Backgrounds</a></li>
+                        <li><a href="flex.html" class="sidebar-link">Flex</a></li>
+                        <li><a href="display.html" class="sidebar-link">Ocultar/Mostrar</a></li>
+                        <li><a href="bordes.html" class="sidebar-link">Bordes</a></li>
+                        <li><a href="shadows.html" class="sidebar-link">Sombras</a></li>
+
+                    </ul>
+                </nav>
+            </aside>
+
+            <main class="col-12 col-md-8 col-lg-9 col-xl-10 p-4">
+               
+                <!--CONTENEDORES-->
+
+                <section class="mb-4">
+                    <h1 class="font-remy mb-1">Visibilidad (Display)</h1>
+                    <p class="font-recipe fs-5 mb-4">Estas clases sirven para mostrar u ocultar elementos. Son especialmente útiles para adaptar tu diseño a
+                        celulares, tablets y computadoras sin cambiar el HTML.</p>
+                    <ul>
+                        <li class="ml-4 font-recipe fs-5"> <code class="text-danger">.d-none</code>: Oculta el elemento por completo (desaparece del plato).</li>
+                        <li class="ml-4 font-recipe fs-5"> <code class="text-danger">.d-block</code>: Muestra el elemento como un bloque (ocupa todo el ancho disponible).</li>
+                    </ul>
+                </section>
+                <section class="example-block mb-5">
+                    <h2 class="font-remy mb-3">Control responsivo</h2>
+                    <p class="font-recipe mb-3 fs-5">Puedes combinar estas clses con los tamaños de pantalla <code class="text-danger">(sm,md,lg,etc.)</code></p>
+                    <ul>
+                        <li class="ml-4 font-recipe fs-5"> <code class="text-danger">.d-{tamaño}-none</code>: Oculta el elemento a partir de ese tamaño de pantalla.</li>
+                        <li class="ml-4 font-recipe fs-5"> <code class="text-danger">.d-{tamaño}-block</code>: Muestra el elemento a partir de ese tamaño de pantalla.</li>
+                    </ul>
+                    <div class="preview-box border">
+                        <div class=" container font-recipe">
+                            <div class="d-block d-md-none alert alert-peligro p-2">
+                                <p class="fw-bold text-center">Cuidado en la cocina.</p>
+                            </div>
+                            <div class="d-none d-md-block alert alert-exito p-2">
+                                <p class="fw-bold text-center">¡Logro desbloqueado!!</p>
+                                <p class="fw-bold text-center">¡Cualquiera puede cocinar!!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="source-box border border-top-0 bg-dark">
+                        <pre><code class="text-light">&lt;div class="d-block d-md-none alert alert-peligro p-2"&gt;
+    &lt;p class="fw-bold text-center"&gt;Cuidado en la cocina.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="d-none d-md-block alert alert-exito p-2"&gt;
+    &lt;p class="fw-bold text-center"&gt;¡Logro desbloqueado!!&lt;/p&gt;
+    &lt;p class="fw-bold text-center"&gt;¡Cualquiera puede cocinar!!&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+                    </div>
+                </section>
+
+            </main>
+        </div>
+    </div>
+    <footer class="font-cuisini bg-dark text-light fs-4 text-center ">
+        Little-Chef &copy; 2026. Todos los derechos reservados.
+    </footer>
+</body>
+
+</html>
