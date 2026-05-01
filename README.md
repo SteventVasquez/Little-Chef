@@ -8,7 +8,7 @@
 
 Dado que este es un framework personalizado, puedes implementarlo de esta manera en tus proyectos:
 
-### 📁 Clonar el repositorio con **git clone** o descarga del ZIP
+### 📁Opcion 1: Clonar el repositorio con **git clone** o descarga del ZIP
 
 1. **Clonar el repositorio**  
    Ejecuta el siguiente comando en tu terminal para clonar el repositorio:
@@ -22,11 +22,18 @@ Dado que este es un framework personalizado, puedes implementarlo de esta manera
    <link rel="stylesheet" href="../css/littlechefLibrary.css">
    ```
 
-4. **Usar las clases en tu HTML**  
+3. **Usar las clases en tu HTML**  
     Puedes usar las clases de la librería en tu HTML:
    ```html
    <button class="btn btn-remy-principal">Haz clic aquí</button>
    ```
+### 📁 Opcion 2: Con cdn
+
+**Puedes incluir Little Chef Library fácilmente en tu proyecto HTML sin la necesidad de descargar archivos. Solo copia este enlace en tu `<head>`:**
+
+```html
+<link rel="stylesheet" href="https://steventvasquez.github.io/Little-Chef/css/littlechefLibrary.css">
+```
 
 ---
 
