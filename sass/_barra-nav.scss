@@ -1,49 +1,171 @@
 @use 'variables' as *;
+@use 'fonts' as *;
+@use 'sass:map';
 
-.navbar{
+//diseño principal
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem $c-padding; 
-    background-color: $dark;
-    color: $light;
+    padding: 1rem 25px;
+    position: relative;
+    font-family: $font-cormorant;
+    background-color: #333;
 
-    .logo img{
-        max-height: 60px;
-        width: auto;
-        color: $secondary;
-        transition: transform 0.3s ease;
+    //logo
+    .nav-logo {
+        z-index: 100;
+
+        img {
+            max-height: 60px;
+            width: auto;
+            transition: transform 0.6s ease;
+        }
 
         &:hover {
-          transform: scale(1.5);  
+            transform: scale(1.4);
+            transition: 0.8s;
         }
     }
 
-    .nav-links{
+    .nav-checkbox {
+        display: none !important;
+    }
+
+    .nav-toggle {
         display: flex;
-        gap: 2rem;
+        flex-direction: column;
+        gap: 6px;
+        cursor: pointer;
+        z-index: 100;
+
+        .bar {
+            display: block;
+            width: 30px;
+            height: 3px;
+            background-color: #fff;
+            border-radius: 3px;
+            transition: all 0.4s ease;
+        }
+    }
+
+    .nav-links {
         list-style: none;
         margin: 0;
         padding: 0;
-        cursor: pointer;
-       
+        display: flex;
 
-        &:hover{
-          transform: scale(1.5);  
+        li {
+            padding: 0 15px;
         }
 
+        a {
+            text-decoration: none;
+            font-weight: 600;
+            color: #fff;
+            display: block;
+            transition: color 0.3s ease;
+        }
     }
+}
 
-    @media (max-width: 768px) {
+.navbar-sticky{
+    position: sticky;
+    top: 0;
+    z-index: 1050;
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 768px) {
+    .navbar .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
         flex-direction: column;
-        gap: 1rem;
+        align-items: center;
+        padding: 2rem 0;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-15px);
+        transition: all 0.4s ease;
+        z-index: 99;
 
-        .nav-links{
-            flex-direction: column;
-            align-items: center;
-            width: 100%;
-            gap: 1rem;
+        li {
+            padding: 15px 0;
         }
-        
+
+        a {
+            font-size: 1.2rem;
+        }
     }
-}   
+
+    .navbar .nav-checkbox:checked~.nav-links {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    .navbar .nav-checkbox:checked~.nav-toggle .bar:nth-child(1) {
+        transform: translateY(9px)rotate(45deg);
+    }
+
+    .navbar .nav-checkbox:checked~.nav-toggle .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .navbar .nav-checkbox:checked~.nav-toggle .bar:nth-child(3) {
+        transform: translateY(-9px)rotate(-45deg);
+    }
+}
+
+@media (min-width: 769px) {
+    .navbar .nav-toggle {
+        display: none !important;
+    }
+
+    .navbar .nav-links {
+        flex-direction: row;
+        position: static;
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: none !important;
+        background-color: transparent !important;
+
+        a {
+            font-size: 1rem;
+        }
+    }
+}
+
+@each $nombre, $paleta in $personajes {
+
+    $base: map.get($paleta, base);
+    $hover: map.get($paleta, hover);
+    $fondo: map.get($paleta, fondo);
+    $letra: map.get($paleta, letra);
+
+    .navbar-#{$nombre} {
+        background-color: $base;
+
+        .nav-toggle .bar {
+            background-color: $fondo;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                background-color: $base;
+                border-top: 2px solid rgba($hover, 0.3);
+            }
+        }
+
+        .nav-links a {
+            color: $fondo;
+
+            &:hover {
+                color: $hover;
+            }
+        }
+    }
+}

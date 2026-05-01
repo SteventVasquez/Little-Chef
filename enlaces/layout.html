@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/littlechefLibrary.css">
+    <title>Layout - Little Chef</title>
+</head>
+<body>
+    <!-- NAVBAR-->
+    <header class="navbar-sticky">
+        <nav class="navbar navbar-remy">
+            <a href="#" class="nav-logo d-flex align-items-center" style="text-decoration: none;">
+                <img src="/img/remyLogo.png" alt="remy" style="width: 50px; height: auto;">
+                <span class="font-remy fw-bold fs-4 ms-2 text-light">Little Chef</span>
+            </a>
+            <input type="checkbox" id="menu-toggle-main" class="nav-checkbox">
+            <label for="menu-toggle-main" class="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </label>
+            <ul class="nav-links font-recipe">
+                <li><a href="../../index.html" class="activo">Inicio</a></li>
+                <li><a href="./layout.html">Documentación</a></li>
+                <li><a href="https://github.com/SteventVasquez/Little-Chef">GitHub</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container-fluid">
+        <div class="row">
+            <!--SIDEBAR-->
+            <aside class="col-12 col-md-4 col-lg-3 col-xl-2 p-0">
+                <nav class="sidebar sidebar-remy">
+                    <div class="sidebar-header font-remy">Documentación</div>
+                    <ul class="sidebar-menu font-recipe">
+                        <div class="sidebar-section-title">
+                            <p>Layout</p>
+                        </div>
+                      <li><a href="../enlaces/layout.html#contenedores"  class="sidebar-link">Contenedores</a></li>
+                        <li><a href="../enlaces/layout.html#clase-grid" class="sidebar-link">Grid</a></li>
+                        <div class="sidebar-section-title">
+                            <p>Componentes</p>
+                        </div>
+                        <li><a href="../enlaces/alertas.html" class="sidebar-link">Alertas</a></li>
+                        <li><a href="../enlaces/badges.html" class="sidebar-link">Badges</a></li>
+                        <li><a href="../enlaces/botones.html" class="sidebar-link">Botones</a></li>
+                        <li><a href="../enlaces/formularios.html" class="sidebar-link">Formularios</a></li>
+                        <li><a href="../enlaces/navbar.html" class="sidebar-link">Navbars</a></li>
+                        <li><a href="../enlaces/tablas.html" class="sidebar-link">Tablas</a></li>
+                        <li><a href="tarjetas.html" class="sidebar-link">Tarjetas</a></li>
+                        <div class="sidebar-section-title">
+                            <p>Utilidades</p>
+                        </div>
+                        <li><a href="../enlaces/utilidades/texto.html" class="sidebar-link">Texto</a></li>
+                        <li><a href="../enlaces/utilidades/espaciado.html" class="sidebar-link">Espaciado</a></li>
+                        <li><a href="../enlaces/utilidades/backgrounds.html" class="sidebar-link">Backgrounds</a></li>
+                        <li><a href="../enlaces/utilidades/flex.html" class="sidebar-link">Flex</a></li>
+                        <li><a href="../enlaces/utilidades/display.html" class="sidebar-link">Ocultar/Mostrar</a></li>
+                        <li><a href="../enlaces/utilidades/bordes.html" class="sidebar-link">Bordes</a></li>
+                        <li><a href="../enlaces/utilidades/shadows.html" class="sidebar-link">Sombras</a></li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <main class="col-12 col-md-8 col-lg-9 col-xl-10 p-4">
+               
+                <section class="mb-5 text-center">
+                    <h1 class="font-remy text-uppercase mb-2">Documentación Little-Chef</h1>
+                    <p class="font-recipe fs-5">
+                        "Cualquiera puede crear, nosotros te damos los ingredientes."
+                    </p>
+                    <p class="font-recipe fs-5 text-secondary">
+                        Crea interfaces responsivas con componentes reutilizables y un sistema grid flexible.
+                    </p>
+
+                </section>
+                <!--CONTENEDORES-->
+
+                <section class="mb-4">
+                    <h2 id="clase-container" class="font-remy mb-1">Contenedores</h2>
+                    <p class="font-recipe fs-5 mb-4">El plato donde comienza cada creación. El contenedor define el espacio y los límites de tu banquete visual.
+                    Los contenedores son el componente fundamental de Little Chef para establecer el ancho máximo del contenido y centrarlo dentro del viewport. </p>
+                    <p class="font-recipe fs-5 mb-4"></p>
+                    <p class="font-recipe fs-5">Ofrecemos dos variantes principales según la necesidad de tu "receta" de diseño:</p>
+                    <ul>
+                        <li class="ml-4 font-recipe fs-5"><code class="text-danger">.container</code>: Un contenedor responsivo con anchos máximos fijos que saltan en cada breakpoint (móvil, tablet, escritorio)</li>
+                        <li class="ml-4 font-recipe fs-5"><code class="text-danger">.container-fluid</code>: Un contenedor de ancho completo que abarca el 100% de la pantalla en todo momento, ideal para layouts fluidos.</li>
+                    </ul>
+                    <p class="font-recipe fs-5 mt-2">La tabla ilustra cómo se comporta el ancho máximo de <code class="text-danger">.container</code> y <code class="text-danger">.container-fluid</code>  </p>
+                    <div class=" mt-2 table-responsive">
+                        <table class="table table-hover table-remy ">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>small &ge;576px </th>
+                                    <th>medium &ge;768px</th>
+                                    <th>large &ge;992px</th>
+                                    <th>x-large &ge;1200px</th>
+                                    <th>xx-large &ge;1400px</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><code class="text-danger">.container</code></td>
+                                    <td>540 px</td>
+                                    <td>720 px</td>
+                                    <td>960 px</td>
+                                    <td>1140 px</td>
+                                    <td>1400 px</td>
+                                </tr>
+                                <tr>
+                                    <td><code class="text-danger">.container-fluid</code></td>
+                                    <td>100%</td>
+                                    <td>100%</td>
+                                    <td>100%</td>
+                                    <td>100%</td>
+                                    <td>100%</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </section>
+
+                <section class="example-block mb-5">
+                    <h2 class="font-remy mb-3">Ejemplo visual del contenedor</h2>
+                    <p class="font-recipe mb-3 fs-5">A continuación, se muestra cómo un <code class="text-danger">.container</code> limita el ancho del contenido y lo centra automáticamente: </p>
+                    <div class="preview-box border bg-light">
+                        <div class="container border text-center" style="height: 100px;">
+                            <span class="badge badge-exito">Resultado de aplicar la clase container</span>
+                            <p class="font-recipe">Este badge está dentro de un <code>.container</code>.</p>
+                        </div>
+                    </div>
+                    <div class="source-box border border-top-0 bg-dark">
+                        <pre><code class="text-light">&lt;div class="container"&gt;Tu contenido aqui.. &lt;/div&gt;</code></pre>
+                    </div>
+                </section>
+                
+                <section class="example-block mb-5">
+                    <h2 class="font-remy mb-3">Ejemplo visual del contenedor fludio</h2>
+                    <p class="font-recipe mb-3 fs-5">A continuación, se muestra cómo <code class="text-danger">.container-fluid</code> toma todo el ancho disponible: </p>
+                    <div class="preview-box border bg-light p-0" style="overflow: hidden;">
+                        <div class="container-fluid bg-primary text-center py-4 ">
+                            <span class="font-remy">Ancho completo</span>
+                            <p class="font-recipe ">Ignora los limites fijos y toma el 100%.</p>
+                        </div>
+                    </div>
+                    <div class="source-box border border-top-0 bg-dark ">
+                        <pre><code class="text-light">&lt;div class="container-fluid"&gt; Tu contenido aqui &lt;/div&gt;</code></pre>
+                    </div>
+                </section>
+
+                <section class="mb-4">
+                    <h2 id="grid" class="font-remy mb-1">Sistema de Rejilla </h2>
+                    <p class="font-recipe fs-5 mb-4">El sistema de rejilla de Little Chef utiliza un modelo de <span class="fw-bold">12 columnas</span> basado en Flexbox
+                    para crear diseños responsivos.</p>
+                    <p class="font-recipe fs-5">Para que el grid funcione, debes respetar la jeraquía de componentes: </p>
+                    <ul>
+                        <li class="ml-4 font-recipe fs-5"> Contenedor <code class="text-danger">(.container)</code>: Define el área de trabajo y centra el contenido</li>
+                        <li class="ml-4 font-recipe fs-5">Fila <code class="text-danger">(.row)</code>: Actúa como el envoltorio para las columnas y elimina los márgenes laterales
+                        mediante márgenes negativos. </li>
+                        <li class="ml-4 font-recipe fs-5">Columnas <code class="text-danger">(.col)</code>: Hay 12 columnas de plantilla disponibles por fila, lo que permite crear diferentes combinaciones de elementos que abarcan cualquier número de columnas.</li>
+                    </ul>
+                </section>
+                <section class="example-block mb-5">
+                    <h2 class="font-remy">Clase <code class="font-remy">.row</code></h2>
+                    <p class="font-recipe fs-5 mb-1">La clase <code class="text-danger">.row</code> es el contenedor que agrupa las columnas. Utiliza <code class="text-danger">display:flex</code> y 
+                        <code class="text-danger">flex-wrap</code> para organizar las columnas en una fila. </p>
+                    <p></p>
+                    <div class="preview-box border bg-light p-3 font-recipe">
+                        <div class="container text-center">
+                            <div class="row">
+                                <div class="col bg-primary ">Columna</div>
+                                <div class="col bg-primary">Columna</div>
+                                <div class="col bg-primary">Columna</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="source-box border border-top-0 bg-dark ">
+                        <pre><code class="text-light">&lt;div class="container text-center"&gt;
+    &lt;div class="row"&gt;
+        &lt;div class="col bg-primary"&gt;columna&lt;/div&gt;
+        &lt;div class="col bg-primary"&gt;columna&lt;/div&gt;
+        &lt;div class="col bg-primary"&gt;columna&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                    </div>
+                </section>
+
+                <section class="example-block mb-5">
+                    <h2 class="font-remy">Columnas con mismo ancho</h2>
+                    <p class="font-recipe fs-5 mb-1">La clase <code class="text-danger">.col</code> divide el espacio disponible entre las columnas de forma equitativa. 
+                 Agrega tantas clases necesites y todas las columnas tendran el mismo ancho.</p>
+                    <div class="preview-box border bg-light p-3 font-recipe">
+                        <div class="container text-center">
+                            <div class="row">
+                                <div class="col bg-info border border-bottom-0">Columna</div>
+                                <div class="col bg-info border border-start-0 border-bottom-0 ">Columna</div>
+                            </div>
+                            <div class="row">
+                                <div class="col bg-info border">Columna</div>
+                                <div class="col bg-info border border-start-0">Columna</div>
+                                <div class="col bg-info border border-start-0">Columna</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="source-box border border-top-0 bg-dark ">
+                        <pre><code class="text-light">&lt;div class="container text-center"&gt;
+    &lt;div class="row"&gt;
+        &lt;div class="col bg-info border border-bottom-0"&gt;columna&lt;/div&gt;
+        &lt;div class="col bg-info border border-start-0 border-bottom-0"&gt;columna&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="row"&gt;
+        &lt;div class="col bg-info border"&gt;columna&lt;/div&gt;
+        &lt;div class="col bg-info border border-start-0"&gt;columna&lt;/div&gt;
+        &lt;div class="col bg-info border border-start-0"&gt;columna&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                    </div>
+                </section>
+
+                <section class="example-block mb-5">
+                    <h2 class="font-remy">Columnas ancho fijo</h2>
+                    <p class="font-recipe fs-5 mb-1">La clase <code class="text-danger">.col-{n}</code> (donde <span class="fw-bold">n</span> es un número del 1 al 12) permite definir
+                    el ancho exacto que una columna ocupará en la fila.</p>
+                    <div class="preview-box border bg-light p-3 font-recipe">
+                        <div class="container text-center">
+                            <div class="row">
+                                <div class="col-4 border">Col-4</div>
+                                <div class="col-8 bg-info border border-start-0">Col-8</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="source-box border border-top-0 bg-dark ">
+                        <pre><code class="text-light">&lt;div class="container text-center"&gt;
+    &lt;div class="row"&gt;
+        &lt;div class="col-4 border"&gt;Col-4&lt;/div&gt;
+        &lt;div class="col-8 bg-info border border-start-0"&gt;Col-8&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                    </div>
+                </section>
+
+                <section class="example-block mb-5">
+                    <h2 class="font-remy">Columnas responsivas</h2>
+                    <p class="font-recipe fs-5 mb-1">Puesdes usar clases <code class="text-danger">.col-sm-*, .col-md-*, hasta .col-xxl-*</code> para definir tamaños según el
+                    ancho de la pantalla.</p>
+                    <div class="preview-box border bg-light p-3 font-recipe">
+                        <div class="container text-center">
+                            <div class="row">
+                                <div class="col-12 col-md-6 col-lg-4 bg-secondary">Columna 1</div>
+                                <div class="col-12 col-md-6 col-lg-8 border">Columna 2</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="source-box border border-top-0 bg-dark ">
+                        <pre><code class="text-light">&lt;div class="container text-center"&gt;
+    &lt;div class="row"&gt;
+        &lt;div class="col-12 col-md-6 col-lg-4 bg-secondary"&gt;Columna 1&lt;/div&gt;
+        &lt;div class="col-12 col-md-6 col-lg-8 border"&gt;Columna 2&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                    </div>
+                </section>
+                <section class="example-block mb-5">
+                    <h2 class="font-remy">Alineación individual de columnas</h2>
+                    <p class="font-recipe fs-5 mb-1">Las clases <code class="text-danger">.align-self-*</code> permiten alinear individualmente cada columna dentro de una fila.</p>
+                    <div class="preview-box border bg-light p-3 font-recipe">
+                        <div class="container">
+                            <div class="row" style="height: 150px;">
+                                <div class="col align-self-start bg-primary">Inicio</div>
+                                <div class="col align-self-center bg-info">Centro</div>
+                                <div class="col align-self-end bg-secondary">Final</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="source-box border border-top-0 bg-dark ">
+                        <pre><code class="text-light">&lt;div class="container text-center"&gt;
+    &lt;div class="row" style="height: 150px"&gt;
+        &lt;div class="col align-self-start bg-primary"&gt;Inicio&lt;/div&gt;
+        &lt;div class="col align-self-center bg-info"&gt;Centro&lt;/div&gt;
+        &lt;div class="col align-self-end bg-secondary"&gt;Final&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                    </div>
+                </section>
+
+                
+
+            </main>
+        </div>
+    </div>
+    <footer class="font-cuisini bg-dark text-light fs-4 text-center ">
+        Little-Chef &copy; 2026. Todos los derechos reservados.
+    </footer>
+</body>
+
+</html>

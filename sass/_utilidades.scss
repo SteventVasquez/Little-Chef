@@ -1,12 +1,41 @@
+.d-flex {
+  display: flex;
+}
+
+
+.flex-row{
+  flex-direction: row;
+}
+
+.flex-column{
+  flex-direction: column;
+}
+.flex-row-reverse{
+  flex-direction: row-reverse;
+}
+
+.flex-column-reverse{
+  flex-direction: column-reverse;
+}
+
+.flex-wrap{
+  flex-wrap: wrap;
+}
+.flex-nowrap{
+  flex-wrap: nowrap;
+}
+//container elementos
 .align-items-start {
   align-items: flex-start;
 }
 .align-items-center {
-  align-items: flex-center;
+  align-items: center;
 }
 .align-items-end {
   align-items: flex-end;
 }
+
+
 .justify-content-start {
   justify-content: flex-start;
 }
@@ -25,6 +54,8 @@
 .justify-content-evenly {
   justify-content: space-evenly
 }
+
+//item individual
 .align-self-start {
   align-self: flex-start;
 }

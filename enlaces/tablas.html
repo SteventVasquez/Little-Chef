@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/littlechefLibrary.css">
+    <title>Tablas - Little-Chef</title>
+</head>
+<body>
+     <!-- NAVBAR-->
+    <header class="navbar-sticky">
+        <nav class="navbar navbar-remy">
+            <a href="#" class="nav-logo d-flex align-items-center" style="text-decoration: none;">
+                <img src="/img/remyLogo.png" alt="remy" style="width: 50px; height: auto;">
+                <span class="font-remy fw-bold fs-4 ms-2 text-light">Little Chef</span>
+            </a>
+            <input type="checkbox" id="menu-toggle-main" class="nav-checkbox">
+            <label for="menu-toggle-main" class="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </label>
+            <ul class="nav-links font-recipe">
+                <li><a href="../../index.html" class="activo">Inicio</a></li>
+                <li><a href="./layout.html">Documentación</a></li>
+                <li><a href="https://github.com/SteventVasquez/Little-Chef">GitHub</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container-fluid">
+        <div class="row">
+         <!--SIDEBAR-->
+            <aside class="col-12 col-md-4 col-lg-3 col-xl-2 p-0">
+                <nav class="sidebar sidebar-remy">
+                    <div class="sidebar-header font-remy">Documentación</div>
+                    <ul class="sidebar-menu font-recipe">
+                        <div class="sidebar-section-title">
+                            <p>Layout</p>
+                        </div>
+                      <li><a href="../enlaces/layout.html#contenedores"  class="sidebar-link">Contenedores</a></li>
+                        <li><a href="../enlaces/layout.html#clase-grid" class="sidebar-link">Grid</a></li>
+                        <div class="sidebar-section-title">
+                            <p>Componentes</p>
+                        </div>
+                        <li><a href="../enlaces/alertas.html" class="sidebar-link">Alertas</a></li>
+                        <li><a href="../enlaces/badges.html" class="sidebar-link">Badges</a></li>
+                        <li><a href="../enlaces/botones.html" class="sidebar-link">Botones</a></li>
+                        <li><a href="../enlaces/formularios.html" class="sidebar-link">Formularios</a></li>
+                        <li><a href="../enlaces/navbar.html" class="sidebar-link">Navbars</a></li>
+                        <li><a href="../enlaces/tablas.html" class="sidebar-link">Tablas</a></li>
+                        <li><a href="tarjetas.html" class="sidebar-link">Tarjetas</a></li>
+                        <div class="sidebar-section-title">
+                            <p>Utilidades</p>
+                        </div>
+                        <li><a href="../enlaces/utilidades/texto.html" class="sidebar-link">Texto</a></li>
+                        <li><a href="../enlaces/utilidades/espaciado.html" class="sidebar-link">Espaciado</a></li>
+                        <li><a href="../enlaces/utilidades/backgrounds.html" class="sidebar-link">Backgrounds</a></li>
+                        <li><a href="../enlaces/utilidades/flex.html" class="sidebar-link">Flex</a></li>
+                        <li><a href="../enlaces/utilidades/display.html" class="sidebar-link">Ocultar/Mostrar</a></li>
+                        <li><a href="../enlaces/utilidades/bordes.html" class="sidebar-link">Bordes</a></li>
+                        <li><a href="../enlaces/utilidades/shadows.html" class="sidebar-link">Sombras</a></li>
+                    </ul>
+                </nav>
+            </aside>
+            <main class="col-12 col-md-8 col-lg-9 col-xl-10 p-4">
+
+                <section class="mb-5 text-center">
+                    <h1 class="font-remy text-uppercase mb-2">Tablas</h1>
+                    <p class="font-recipe fs-5">
+                        Organiza tus ingredientes, recetas y críticas gastronómicas con elegancia y orden.
+                    </p>
+                    <p class="font-recipe fs-5 text-secondary">
+                        "En la cocina, el orden es tan importante como el sabor. Usa nuestras tablas para estructurar tu información."
+                    </p>
+                </section>
+
+                <section class="mb-4">
+                    <h2 class="font-remy mb-1">Tabla de Remy (Estructural)</h2>
+                    <p class="font-recipe fs-5 mb-4">Una tabla limpia con bordes definidos para asegurar la visibilidad de cada dato.</p>
+                </section>
+
+                <section class="example-block mb-5">
+                    <div class="preview-box border border-remy p-4 rounded">
+                        <table class="font-recipe table table-hover">
+                            <thead>
+                                <tr class="border-bottom border-remy">
+                                    <th class="font-remy p-3 text-start fs-5">Ingrediente</th>
+                                    <th class="font-remy p-3 text-start fs-5">Cantidad</th>
+                                    <th class="font-remy p-3 text-start fs-5">Estado</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-bottom">
+                                    <td class="p-3">Calabacín</td>
+                                    <td class="p-3">2 piezas</td>
+                                    <td class="p-3">Fresco</td>
+                                </tr>
+                                <tr class="border-bottom">
+                                    <td class="p-3">Berenjena</td>
+                                    <td class="p-3">1 pieza</td>
+                                    <td class="p-3">En stock</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="source-box border border-top-0 bg-dark">
+<pre><code class="text-light">&lt;table class="font-recipe table table-hover"&gt;
+    &lt;thead&gt;
+        &lt;tr class="border-bottom border-remy"&gt;
+            &lt;th class="font-remy"&gt;Ingrediente&lt;/th&gt;
+            &lt;th class="font-remy"&gt;Cantidad&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    ...
+&lt;/table&gt;</code></pre>
+                    </div>
+                </section>
+
+                <section class="mb-4">
+                    <h2 class="font-remy mb-1">Tabla de Ego (Elegante)</h2>
+                    <p class="font-recipe fs-5 mb-4">Utiliza un diseño de alto contraste con el color base de Ego para resaltar los encabezados.</p>
+                </section>
+
+                <section class="example-block mb-5">
+                    <div class="preview-box border border-ego p-4 rounded">
+                       <table class="font-recipe table table-ego table-hover">
+                            <thead class="bg-ego text-light">
+                                <tr>
+                                    <th class="font-remy p-3 text-start fs-5">Restaurante</th>
+                                    <th class="font-remy p-3 text-start fs-5">Platillo</th>
+                                    <th class="font-remy p-3 text-start fs-5">Calificación</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-bottom border-ego">
+                                    <td class="p-3">Gusteau's</td>
+                                    <td class="p-3">Ratatouille</td>
+                                    <td class="p-3">5 Estrellas</td>
+                                </tr>
+                                <tr class="border-bottom border-ego">
+                                    <td class="p-3">La Ratatouille</td>
+                                    <td class="p-3">Sopa del día</td>
+                                    <td class="p-3">4 Estrellas</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="source-box border border-top-0 bg-dark">
+<pre><code class="text-light">&lt;thead class="bg-ego text-light"&gt;
+    &lt;tr&gt;
+        &lt;th class="font-remy"&gt;Restaurante&lt;/th&gt;
+        &lt;th class="font-remy"&gt;Calificación&lt;/th&gt;
+    &lt;/tr&gt;
+&lt;/thead&gt;</code></pre>
+                    </div>
+                </section>
+
+                <section class="mb-4">
+                    <h2 class="font-remy mb-1">Tabla de Collete (Directa)</h2>
+                    <p class="font-recipe fs-5 mb-4">Diseño firme con bordes internos que dividen claramente las estaciones de trabajo o tareas.</p>
+                </section>
+
+                <section class="example-block mb-5">
+                    <div class="preview-box border border-collete p-4 rounded">
+                        <table class="font-recipe table table-collete table-hover">
+                            <thead>
+                                <tr class="bg-collete text-light">
+                                    <th class="font-remy p-3 text-start fs-5">Estación</th>
+                                    <th class="font-remy p-3 text-start fs-5">Chef encargado</th>
+                                    <th class="font-remy p-3 text-start fs-5">Prioridad</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="p-3 border border-collete">Salsas</td>
+                                    <td class="p-3 border border-collete">Horst</td>
+                                    <td class="p-3 border border-collete"><span class="badge bg-collete text-light px-2 rounded">Alta</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="p-3 border border-collete">Carnes</td>
+                                    <td class="p-3 border border-collete">Larousse</td>
+                                    <td class="p-3 border border-collete"><span class="badge bg-ego text-light px-2 rounded">Media</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="source-box border border-top-0 bg-dark">
+<pre><code class="text-light">&lt;!-- Tabla con bordes internos de Collete --&gt;
+&lt;td class="border border-collete"&gt;Salsas&lt;/td&gt;</code></pre>
+                    </div>
+                </section>
+
+            </main>
+        </div>
+    </div>
+    
+    <footer class="font-cuisini bg-dark text-light fs-4 text-center ">
+        Little-Chef &copy; 2026. Todos los derechos reservados.
+    </footer>
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/littlechefLibrary.css">
+    <title>Display - Little Chef</title>
+</head>
+<body>
+   <!-- NAVBAR-->
+    <header class="navbar-sticky">
+        <nav class="navbar navbar-remy">
+            <a href="#" class="nav-logo d-flex align-items-center" style="text-decoration: none;">
+                <img src="/img/remyLogo.png" alt="remy" style="width: 50px; height: auto;">
+                <span class="font-remy fw-bold fs-4 ms-2 text-light">Little Chef</span>
+            </a>
+            <input type="checkbox" id="menu-toggle-main" class="nav-checkbox">
+            <label for="menu-toggle-main" class="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </label>
+            <ul class="nav-links font-recipe">
+                <li><a href="../../index.html" class="activo">Inicio</a></li>
+                <li><a href="../layout.html">Documentación</a></li>
+                <li><a href="https://github.com/SteventVasquez/Little-Chef">GitHub</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container-fluid">
+        <div class="row">
+            <!--SIDEBAR-->
+            <aside class="col-12 col-md-4 col-lg-3 col-xl-2 p-0">
+                <nav class="sidebar sidebar-remy">
+                    <div class="sidebar-header font-remy">Documentación</div>
+                    <ul class="sidebar-menu font-recipe">
+                        <div class="sidebar-section-title">
+                            <p>Layout</p>
+                        </div>
+                        <li><a href="../layout.html#clase-container"  class="sidebar-link">Contenedores</a></li>
+                        <li><a href="../layout.html#grid" class="sidebar-link">Grid</a></li>
+                        <div class="sidebar-section-title">
+                            <p>Componentes</p>
+                        </div>
+                        <li><a href="../alertas.html" class="sidebar-link">Alertas</a></li>
+                        <li><a href="../badges.html" class="sidebar-link">Badges</a></li>
+                        <li><a href="../botones.html" class="sidebar-link">Botones</a></li>
+                        <li><a href="../formularios.html" class="sidebar-link">Formularios</a></li>
+                        <li><a href="../navbar.html" class="sidebar-link">Navbars</a></li>
+                        <li><a href="../tablas.html" class="sidebar-link">Tablas</a></li>
+                        <li><a href="../tarjetas.html" class="sidebar-link">Tarjetas</a></li>
+                        <div class="sidebar-section-title">
+                            <p>Utilidades</p>
+                        </div>
+                        <li><a href="texto.html" class="sidebar-link">Texto</a></li>
+                        <li><a href="espaciado.html" class="sidebar-link">Espaciado</a></li>
+                        <li><a href="backgrounds.html" class="sidebar-link">Backgrounds</a></li>
+                        <li><a href="flex.html" class="sidebar-link">Flex</a></li>
+                        <li><a href="display.html" class="sidebar-link">Ocultar/Mostrar</a></li>
+                        <li><a href="bordes.html" class="sidebar-link">Bordes</a></li>
+                        <li><a href="shadows.html" class="sidebar-link">Sombras</a></li>
+
+                    </ul>
+                </nav>
+            </aside>
+
+            <main class="col-12 col-md-8 col-lg-9 col-xl-10 p-4">
+               
+                <!--CONTENEDORES-->
+
+                <section class="mb-4">
+                    <h1 class="font-remy mb-1">Organización Flexible (Flexbox)</h1>
+                    <p class="font-recipe fs-5 mb-4">Flexbox es nuestra herramienta para alinear y distribuir elementos de forma
+                        automática. Es como tener un chef de sala que organiza cada plato para que siempre se vea perfecto, sin importar el tamaño de la mesa.</p>
+                </section>
+                <section class="example-block mb-5">
+                    <h2 class="font-remy mb-3">El Contenedor <code class="text-danger font-recipe">(.d-flex)</code></h2>
+                    <p class="font-recipe mb-3 fs-5">Para que cualquier regla de organización funcione, el padre debe ser un contenedor flexible. Es el
+                        tablero de cocina donde ocurre la magia.
+                    </p>
+                    <h3 class="font-recipe mb-2">Direccion y flujo</h3>
+                    <p class="font-recipe fs-5 mb-1">Decide cómo se ordenan los elementos dentro del contenedor.</p>
+                    <ul>
+                        <li class="ml-4 font-recipe fs-5"><code class="text-danger font-recipe">.flex-row</code>: Los elementos se alinean como cubiertos en una fila (horizontal).</li>
+                        <li class="ml-4 font-recipe fs-5"><code class="text-danger font-recipe">.flex-column</code>: Los elementos se apilan como una torre de panqueques (vertical).</li>
+                        <li class="ml-4 font-recipe fs-5"><code class="text-danger font-recipe">.flex-wrap</code>: Si no hay espacio, los elementos pasan a la siguiente fila (como galletas en una bandeja).</li>
+                    </ul>
+                    <h3 class="font-recipe mb-2 mt-2">Alineación de los "Platos"</h3>
+                    <p class="font-recipe fs-5 mb-1">Controla el espacio y la posición de tus elementos con precisión: </p>
+                    <div class=" mt-2 table-responsive">
+                        <table class="table table-hover table-ego ">
+                            <thead>
+                                <tr>
+                                    <th>Clase</th>
+                                    <th>Función</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><code class="text-danger font-recipe">justify-content-*</code></td>
+                                    <td>Controla el alineamiento horizontal.</td>
+                                </tr>
+                                <tr>
+                                    <td><code class="text-danger font-recipe">align-items-*</code></td>
+                                    <td>Controla el alineamiento vertical de todos los elementos a la vez.</td>
+                                </tr>
+                                <tr>
+                                    <td><code class="text-danger font-recipe">align-self-*</code></td>
+                                    <td>Permite que un solo elemento se rebele y se alinee diferente al resto.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="preview-box border bg-light p-3">
+                        <div class="d-flex justify-content-between align-items-center" style="height: 200px;">
+                            <div class="p-2 border border-warning"> Queso</div>
+                            <div class="p-2 border alert-informacion shadow-sm">Remy</div>
+                            <div class="p-2 border border-secondary">Tomate</div>
+                            
+                        </div>
+                    </div>
+                    <div class="source-box border border-top-0 bg-dark">
+                        <pre><code class="text-light">&lt;div class="d-flex justify-content-between align-items-center"&gt;
+    &lt;div class="p-2 border border-warning"&gt;Queso&lt;/div&gt;
+    &lt;div class="p-2 border alert-informacion shadow-sm"&gt;Remy&lt;/div&gt;
+    &lt;div class="p-2 border border-secondary"&gt;Tomate&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                    </div>
+                </section>
+
+            </main>
+        </div>
+    </div>
+    <footer class="font-cuisini bg-dark text-light fs-4 text-center ">
+        Little-Chef &copy; 2026. Todos los derechos reservados.
+    </footer>
+</body>
+
+</html>

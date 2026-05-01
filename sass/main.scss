@@ -1,8 +1,32 @@
-@use 'botones';
-@use 'alertas';
-@use 'barra-nav';
-@use 'formularios';
-@use 'tablas';
-@use 'tarjetas';
+@use 'reset';
 @use 'variables';
 @use 'fonts';
+//layout
+@use 'layout/grid';
+@use 'layout/containers';
+@use 'utilidades';
+
+//componentes
+@use 'alertas';
+@use 'badges';
+@use 'formularios';
+@use 'botones';
+@use 'tarjetas';
+@use 'barra-nav';
+@use 'sidebar';
+@use './docs/doc';
+@use 'tablas';
+
+//clases utilitarias
+
+@use "utilities/borders";
+@use "utilities/display";
+@use "utilities/shadows";
+@use "utilities/spacing";
+@use "utilities/text";
+
+
+
+
+
+

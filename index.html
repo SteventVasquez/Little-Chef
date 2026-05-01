@@ -1,25 +1,92 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/littlechefLibrary.css">
-    <title>Little-Chef Librería</title>
+    <link rel="stylesheet" href="./css/littlechefLibrary.css">
+    <title>Little Chef - Framework CSS</title>
 </head>
+
 <body>
-        <nav class="navbar">
-        <div class="logo">
-            <img src="../img/remyLogo.png" alt="">
+    <!-- NAVBAR-->
+    <header class="navbar-sticky">
+        <nav class="navbar navbar-remy">
+            <a href="#" class="nav-logo d-flex align-items-center" style="text-decoration: none;">
+                <img src="./img/remyLogo.png" alt="remy" style="width: 50px; height: auto;">
+                <span class="font-remy fw-bold fs-4 ms-2 text-light">Little Chef</span>
+            </a>
+            <input type="checkbox" id="menu-toggle-main" class="nav-checkbox">
+            <label for="menu-toggle-main" class="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </label>
+            <ul class="nav-links font-recipe">
+                <li><a href="./index.html" class="activo">Inicio</a></li>
+                <li><a href="./enlaces/layout.html">Documentación</a></li>
+                <li><a href="https://github.com/SteventVasquez/Little-Chef">GitHub</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="container-fluid p-5">
+        <div class="row align-items-center" style="min-height: 75vh;">
+            
+            <div class="col-12 col-md-6 text-center text-md-start mb-5 mb-md-0 px-4">
+                <h1 class="font-remy display-1 text-remy mb-2" style="font-size: 4rem; font-weight: 800;">Little Chef</h1>
+                <h2 class="font-remy fs-3 text-secondary mb-4 italic">"Cualquiera puede codificar"</h2>
+                <p class="font-recipe fs-4 text-dark mb-5" style="line-height: 1.6;">
+                    Un framework CSS ligero, modular inspirado en la pelicula de ratatouille. Diseñado para que construyas interfaces con la misma pasión y orden con la que el chef remy crea sus platillos.
+                </p>
+                
+                <div class="d-flex justify-content-center justify-content-md-start gap-3" style="gap: 1rem;">
+                   
+                    <a href="./enlaces/layout.html" class="btn btn-md btn-remy-principal font-recipe fs-5 px-4" style="text-decoration: none;">Ver Documentación</a>
+                 
+                    <a href="https://github.com/SteventVasquez/Little-Chef " target="_blank" rel="noopener noreferrer" class="btn btn-md btn-collete-outline font-recipe fs-5 px-4" style="text-decoration: none;">Ver en GitHub</a>
+                </div>
+            </div>
+
+           
+            <div class="col-12 col-md-6 text-center">
+                <img src="./img/ratatouille-fondo.png" alt="chef remy" class="img-fluid rounded shadow-lg border border-ego p-2" style="max-width: 100%; height: auto; border-width: 4px !important; background-color: #fff;">
+            </div>
+            
         </div>
+    </main>
 
-        <ul class="nav-links">
-            <li><a href=""></a>Inicio</li>
-            <li><a href=""></a>Documentacion</li>
-            <li><a href=""></a>GitHub</li>
-        </ul>
-    </nav>
+    <section class="container-fluid p-5 bg-light border-top">
+        <h2 class="font-remy text-center text-uppercase mb-5 fs-2">Los Ingredientes de Nuestro Framework</h2>
+        <div class="row">
+            <div class="col-12 col-md-4 mb-4">
+                <div class="card shadow-sm border border-remy h-100">
+                    <div class="card-body p-4 text-center">
+                        <h3 class="font-remy fs-4 mb-3 text-remy">Componentes Modulares</h3>
+                        <p class="font-recipe text-dark">Botones, tarjetas, alertas y formularios, etc listos para servirse directamente en tu HTML sin escribir CSS extra.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4 mb-4">
+                <div class="card shadow-sm border border-ego h-100">
+                    <div class="card-body p-4 text-center">
+                        <h3 class="font-remy fs-4 mb-3 text-ego">Temas de Personajes</h3>
+                        <p class="font-recipe text-dark">Clases utilitarias con paletas de colores exclusivas basadas en la esencia de Remy, Ego, Linguini y Collete.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4 mb-4">
+                <div class="card shadow-sm border border-collete h-100">
+                    <div class="card-body p-4 text-center">
+                        <h3 class="font-remy fs-4 mb-3 text-collete">Responsivo</h3>
+                        <p class="font-recipe text-dark">Un sistema Grid flexible que adapta tus diseños a cualquier pantalla, desde móviles hasta monitores de escritorio.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-
-   
+    <footer class="font-cuisini bg-dark text-light fs-4 text-center ">
+        Little-Chef &copy; 2026. Todos los derechos reservados.
+    </footer>
 </body>
+
 </html>

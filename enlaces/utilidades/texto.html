@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/littlechefLibrary.css">
+    <title>Texto - Little Chef</title>
+</head>
+<body>
+    <!-- NAVBAR-->
+    <header class="navbar-sticky">
+        <nav class="navbar navbar-remy">
+            <a href="#" class="nav-logo d-flex align-items-center" style="text-decoration: none;">
+                <img src="/img/remyLogo.png" alt="remy" style="width: 50px; height: auto;">
+                <span class="font-remy fw-bold fs-4 ms-2 text-light">Little Chef</span>
+            </a>
+            <input type="checkbox" id="menu-toggle-main" class="nav-checkbox">
+            <label for="menu-toggle-main" class="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </label>
+            <ul class="nav-links font-recipe">
+                <li><a href="../../index.html" class="activo">Inicio</a></li>
+                <li><a href="../layout.html">Documentación</a></li>
+                <li><a href="https://github.com/SteventVasquez/Little-Chef">GitHub</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container-fluid">
+        <div class="row">
+            <!--SIDEBAR-->
+            <aside class="col-12 col-md-4 col-lg-3 col-xl-2 p-0">
+                <nav class="sidebar sidebar-remy">
+                    <div class="sidebar-header font-remy">Documentación</div>
+                    <ul class="sidebar-menu font-recipe">
+                        <div class="sidebar-section-title">
+                            <p>Layout</p>
+                        </div>
+                        <li><a href="../layout.html#clase-container"  class="sidebar-link">Contenedores</a></li>
+                        <li><a href="../layout.html#grid" class="sidebar-link">Grid</a></li>
+                        <div class="sidebar-section-title">
+                            <p>Componentes</p>
+                        </div>
+                        <li><a href="../alertas.html" class="sidebar-link">Alertas</a></li>
+                        <li><a href="../badges.html" class="sidebar-link">Badges</a></li>
+                        <li><a href="../botones.html" class="sidebar-link">Botones</a></li>
+                        <li><a href="../formularios.html" class="sidebar-link">Formularios</a></li>
+                        <li><a href="../navbar.html" class="sidebar-link">Navbars</a></li>
+                        <li><a href="../tablas.html" class="sidebar-link">Tablas</a></li>
+                        <li><a href="../tarjetas.html" class="sidebar-link">Tarjetas</a></li>
+                        <div class="sidebar-section-title">
+                            <p>Utilidades</p>
+                        </div>
+                        <li><a href="texto.html" class="sidebar-link">Texto</a></li>
+                        <li><a href="espaciado.html" class="sidebar-link">Espaciado</a></li>
+                        <li><a href="backgrounds.html" class="sidebar-link">Backgrounds</a></li>
+                        <li><a href="flex.html" class="sidebar-link">Flex</a></li>
+                        <li><a href="display.html" class="sidebar-link">Ocultar/Mostrar</a></li>
+                        <li><a href="bordes.html" class="sidebar-link">Bordes</a></li>
+                        <li><a href="shadows.html" class="sidebar-link">Sombras</a></li>
+
+                    </ul>
+                </nav>
+            </aside>
+
+            <main class="col-12 col-md-8 col-lg-9 col-xl-10 p-4">
+               
+                <!--CONTENEDORES-->
+
+                <section class="mb-4">
+                    <h2 class="font-remy mb-1">Texto</h2>
+                    <p class="font-recipe fs-5 mb-4">El texto es el ingrediente principal de cualquier interfaz. Con estas clases, puedes
+                        controlar el tamaño, el peso., alineacion y color de tus textos de forma rápida.</p>
+                </section>
+                <section class="example-block mb-5">
+                    <h2 class="font-remy mb-3">Tamaños de fuente</h2>
+                    <p class="font-recipe mb-3 fs-5">Utiliza <code class="text-danger">fs-</code>  (font-size) para cambiar
+                    el tamaño del texto. El sistema sigue una jerarquía donde el número menor es el mas grande.</p>
+                    <div class="preview-box border bg-light">
+                        <div class=" container font-recipe">
+                            <p class="fs-1 text-primary text-center m-2">fs-1</p>
+                            <p class="fs-2 text-primary text-center m-2">fs-2</p>
+                            <p class="fs-3 text-primary text-center m-2">fs-3</p>
+                            <p class="fs-4 text-primary text-center m-2">fs-4</p>
+                            <p class="fs-5 text-primary text-center m-2">fs-5</p>
+                            <p class="fs-6 text-primary text-center m-2">fs-6</p>
+                        </div>
+                    </div>
+                    <div class="source-box border border-top-0 bg-dark">
+                        <pre><code class="text-light">&lt;p class="fs-1 text-primary text-center m-2"&gt;fs-1&lt;/p&gt;
+&lt;p class="fs-2 text-primary text-center m-2"&gt;fs-2&lt;/p&gt;
+&lt;p class="fs-3 text-primary text-center m-2"&gt;fs-3&lt;/p&gt;
+&lt;p class="fs-4 text-primary text-center m-2"&gt;fs-4&lt;/p&gt;
+&lt;p class="fs-5 text-primary text-center m-2"&gt;fs-5&lt;/p&gt;
+&lt;p class="fs-6 text-primary text-center m-2"&gt;fs-6&lt;/p&gt;</code></pre>
+                 </div>
+                </section>
+                
+                <section class="example-block mb-5">
+                    <h2 class="font-remy mb-3">Font Weight</h2>
+                    <p class="font-recipe mb-3 fs-5">Esta clase sirve para definir que tan ancha o ligera necesitas la fuente.</p>
+                    <div class="preview-box border bg-light">
+                        <div class="container font-recipe fs-4">
+                            <p class="fw-bold text-primary text-center m-2">texto bold</p>
+                            <p class="fw-semibold text-primary text-center m-2">texto semibold</p>
+                            <p class="fw-normal text-primary text-center m-2">texto normal</p>
+                            <p class="fw-medium text-primary text-center m-2">texto medium</p>
+                            <p class="fw-light text-primary text-center m-2">texto light</p>
+                        </div>
+                    </div>
+                    <div class="source-box border border-top-0 bg-dark ">
+                        <pre><code class="text-light">&lt;p class="fw-bold text-primary text-center m-2"&gt;texto bold&lt;/p&gt;
+&lt;p class="fw-semibold text-primary text-center m-2"&gt;texto semibold&lt;/p&gt;
+&lt;p class="fw-normal text-primary text-center m-2"&gt;texto normal&lt;/p&gt;
+&lt;p class="fw-medium text-primary text-center m-2"&gt;texto medium&lt;/p&gt;
+&lt;p class="fw-light text-primary text-center m-2"&gt;texto light&lt;/p&gt;</code></pre>
+                    </div>
+                </section>
+
+                <section class="example-block mb-5">
+                    <h2 class="font-remy mb-1">Alineación del texto</h2>
+                    <p class="font-recipe fs-5 mb-4">Ubica el texto exactamente donde lo necesites dentro de su contenedor.</p>
+                    <ul">
+                        <li class="ml-4 font-recipe fs-5"><code class="text-danger">.text-start</code> : Alinea el texto a la izquierda (por defecto).</li>
+                        <li class="ml-4 font-recipe fs-5"><code class="text-danger">.text-center</code> : Centra el texto, muy útil para tarjetas.</li>
+                        <li class="ml-4 font-recipe fs-5"><code class="text-danger">.text-end</code> : Alinea el texto a la derecha.</li>
+                    </ul>
+                    <div class="preview-box border bg-light p-3 font-recipe text-danger">
+                        <p class="fs-4 text-start m-3">Cualquiera puede cocinar</p>
+                        <p class="fs-4 text-center m-3">Cualquiera puede cocinar</p>
+                        <p class="fs-4 text-end m-3">Cualquiera puede cocinar</p>
+                    </div>
+                    <div class="source-box border border-top-0 bg-dark ">
+                        <pre><code class="text-light">&lt;p class="fs-4 text-start m-2"&gt;Cualquiera puede cocinar&lt;/p&gt;
+&lt;p class="fs-4 text-center m-2"&gt;Cualquiera puede cocinar&lt;/p&gt;
+&lt;p class="fs-4 text-end m-2"&gt;Cualquiera puede cocinar&lt;/p&gt;</code></pre>
+                    </div>
+                </section>
+
+                <section class="example-block mb-5">
+                    <h2 class="font-remy">Transformación del texto</h2>
+                    <p class="font-recipe fs-5 mb-1">Estas utilidades te permiten cambiar rápidamente entre mayúsculas y minúsculas para dar jerarquía a tus textos.</p>
+                    <div class="preview-box border bg-light p-3 font-recipe">
+                        <div class="container text-center text-primary">
+                            <p class="text-uppercase fs-5 m-2">manten tu estación limpia</p>
+                            <p class="text-lowercase fs-5 m-2">MANTEN TU ESTACIÓN LIMPIA</p>
+                            <p class="text-capitalize fs-5 m-2">manten tu estación limpia</p>
+                        </div>
+                    </div>
+                    <div class="source-box border border-top-0 bg-dark ">
+                        <pre><code class="text-light">&lt;p class="text-uppercase fs-5 m-2"&gt;manten tu estación limpia&lt;/p&gt;
+&lt;p class="text-lowercase fs-5 m-2"&gt;MANTEN TU ESTACIÓN LIMPIA&lt;/p&gt;
+&lt;p class="text-capitalize fs-5 m-2"&gt;manten tu estación limpia&lt;/p&gt;</code></pre>
+                    </div>
+                </section>
+                <section class="example-block mb-5">
+                    <h2 class="font-remy">Colores de texto</h2>
+                    <p class="font-recipe fs-5 mb-1">Así como una especia resalta el sabor de un plato, nuestras clases de color resaltan el mensaje de
+                    tu interfaz.
+                    </p>
+                    <div class="preview-box border  p-3 font-recipe">
+                        <div class="container fs-5">
+                            <p class="text-primary m-2 text-center">Text Primary</p>
+                            <p class="text-secondary m-2 text-center">Text Secondary</p>
+                            <p class="text-success m-2 text-center">Text Success</p>
+                            <p class="text-info m-2 text-center">Text Info</p>
+                            <p class="text-warning m-2 text-center">Text Warning</p>
+                            <p class="text-danger m-2 text-center">Text Danger</p>
+                            <p class="text-light m-2 bg-primary text-center">Text Light</p>
+                            <p class="text-alert m-2 text-center">Text Alert</p>
+                            <p class="text-dark m-2 text-center">Text Dark</p>
+                            
+                        </div>
+                    </div>
+                    <div class="source-box border border-top-0 bg-dark ">
+                        <pre><code class="text-light">&lt;p class="text-primary m-2 text-center"&gt;Text Primary&lt;/p&gt;
+&lt;p class="text-secondary m-2 text-center"&gt;Text Secondary&lt;/p&gt;
+&lt;p class="text-success m-2 text-center"&gt;Text Success&lt;/p&gt;
+&lt;p class="text-info m-2 text-center"&gt;Text Info&lt;/p&gt;
+&lt;p class="text-warning m-2 text-center"&gt;Text Warning&lt;/p&gt;
+&lt;p class="text-danger m-2 text-center"&gt;Text Danger&lt;/p&gt;
+&lt;p class="text-light m-2 bg-primary text-center"&gt;Text Light&lt;/p&gt;
+&lt;p class="text-alert m-2 text-center"&gt;Text Alert&lt;/p&gt;
+&lt;p class="text-dark m-2 text-center"&gt;Text Dark&lt;/p&gt;
+</code></pre>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+    <footer class="font-cuisini bg-dark text-light fs-4 text-center ">
+        Little-Chef &copy; 2026. Todos los derechos reservados.
+    </footer>
+</body>
+
+</html>

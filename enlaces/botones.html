@@ -1,21 +1,206 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/littlechefLibrary.css">
-    <title>Botones</title>
+    <title>Botones - Little Chef</title>
 </head>
 <body>
+   <!-- NAVBAR-->
+    <header class="navbar-sticky">
+        <nav class="navbar navbar-remy">
+            <a href="#" class="nav-logo d-flex align-items-center" style="text-decoration: none;">
+                <img src="/img/remyLogo.png" alt="remy" style="width: 50px; height: auto;">
+                <span class="font-remy fw-bold fs-4 ms-2 text-light">Little Chef</span>
+            </a>
+            <input type="checkbox" id="menu-toggle-main" class="nav-checkbox">
+            <label for="menu-toggle-main" class="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </label>
+            <ul class="nav-links font-recipe">
+                <li><a href="../../index.html" class="activo">Inicio</a></li>
+                <li><a href="./layout.html">Documentación</a></li>
+                <li><a href="https://github.com/SteventVasquez/Little-Chef">GitHub</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <button class="btn btn-lg btn-secondary">Ver Menú</button>
+    <div class="container-fluid">
+        <div class="row">
+           <!--SIDEBAR-->
+            <aside class="col-12 col-md-4 col-lg-3 col-xl-2 p-0">
+                <nav class="sidebar sidebar-remy">
+                    <div class="sidebar-header font-remy">Documentación</div>
+                    <ul class="sidebar-menu font-recipe">
+                        <div class="sidebar-section-title">
+                            <p>Layout</p>
+                        </div>
+                      <li><a href="../enlaces/layout.html#contenedores"  class="sidebar-link">Contenedores</a></li>
+                        <li><a href="../enlaces/layout.html#clase-grid" class="sidebar-link">Grid</a></li>
+                        <div class="sidebar-section-title">
+                            <p>Componentes</p>
+                        </div>
+                        <li><a href="../enlaces/alertas.html" class="sidebar-link">Alertas</a></li>
+                        <li><a href="../enlaces/badges.html" class="sidebar-link">Badges</a></li>
+                        <li><a href="../enlaces/botones.html" class="sidebar-link">Botones</a></li>
+                        <li><a href="../enlaces/formularios.html" class="sidebar-link">Formularios</a></li>
+                        <li><a href="../enlaces/navbar.html" class="sidebar-link">Navbars</a></li>
+                        <li><a href="../enlaces/tablas.html" class="sidebar-link">Tablas</a></li>
+                        <li><a href="tarjetas.html" class="sidebar-link">Tarjetas</a></li>
+                        <div class="sidebar-section-title">
+                            <p>Utilidades</p>
+                        </div>
+                        <li><a href="../enlaces/utilidades/texto.html" class="sidebar-link">Texto</a></li>
+                        <li><a href="../enlaces/utilidades/espaciado.html" class="sidebar-link">Espaciado</a></li>
+                        <li><a href="../enlaces/utilidades/backgrounds.html" class="sidebar-link">Backgrounds</a></li>
+                        <li><a href="../enlaces/utilidades/flex.html" class="sidebar-link">Flex</a></li>
+                        <li><a href="../enlaces/utilidades/display.html" class="sidebar-link">Ocultar/Mostrar</a></li>
+                        <li><a href="../enlaces/utilidades/bordes.html" class="sidebar-link">Bordes</a></li>
+                        <li><a href="../enlaces/utilidades/shadows.html" class="sidebar-link">Sombras</a></li>
+                    </ul>
+                </nav>
+            </aside>
+            <main class="col-12 col-md-8 col-lg-9 col-xl-10 p-4">
 
-    <button class="btn btn-md btn-outline-primary">Reservar Mesa</button>
+                <section class="mb-5 text-center">
+                    <h1 class="font-remy text-uppercase mb-2">Botones</h1>
+                    <p class="font-recipe fs-5">
+                        Nuestros botones están inspirados en la cocina de París, combinando colores vibrantes y efectos dinámicos.
+                    </p>
+                    <p class="font-recipe fs-5 text-secondary ">
+                        "Los botones son elementos esenciales en cualquier sitio web. Personaliza sus estilos para
+                        destacar acciones importantes."
+                    </p>
+                </section>
 
-    <button class="btn btn-sm btn-warning">Promociones</button>
+                <section class="mb-4">
+                    <h2 class="font-remy mb-1">Botones de Remy.</h2>
+                    <p class="font-recipe fs-5 mb-4">Los botones de Remy representan esa intensidad de colores vibrantes
+                        que destacará en tus páginas.</p>
+                </section>
 
-    <button class="btn btn-md btn-danger" disabled>Cerrado temporalmente</button>
+                <section class="example-block mb-5">
+                    <div class="preview-box border p-4 text-center">
+                        <div class="row">
+                            <div class="col-12 col-md-3 mb-2">
+                                <button class="btn btn-md btn-remy-principal font-recipe">Remy</button>
+                            </div>
+                            <div class="col-12 col-md-3 mb-2">
+                                <button class="btn btn-md btn-remy-inverso font-recipe">Remy</button>
+                            </div>
+                            <div class="col-12 col-md-3 mb-2">
+                                <button class="btn btn-md btn-remy-outline font-recipe">Remy</button>
+                            </div>
+                            <div class="col-12 col-md-3 mb-2">
+                                <button class="btn btn-md btn-remy-elegante font-recipe">Remy</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="source-box border border-top-0 bg-dark">
+                        <pre><code class="text-light">&lt;button class="btn btn-md btn-remy-principal font-recipe"&gt;Remy&lt;/button&gt;
+&lt;button class="btn btn-md btn-remy-inverso"&gt;Remy&lt;/button&gt;
+&lt;button class="btn btn-md btn-remy-outline"&gt;Remy&lt;/button&gt;
+&lt;button class="btn btn-md btn-remy-elegante"&gt;Remy&lt;/button&gt;</code></pre>
+                    </div>
+                </section>
 
-   
+                <section class="mb-4">
+                    <h2 class="font-cuisini mb-1">Botones de Ego.</h2>
+                    <p class="font-recipe fs-5 mb-4">Los botones de Ego tienen un efecto elegante y sobrio que impone
+                        autoridad al interactuar con ellos.</p>
+                </section>
+
+                <section class="example-block mb-5">
+                    <div class="preview-box border p-4 text-center">
+                        <div class="row">
+                            <div class="col-12 col-md-3 mb-2">
+                                <button class="btn btn-md btn-ego-principal">Ego</button>
+                            </div>
+                            <div class="col-12 col-md-3 mb-2">
+                                <button class="btn btn-md btn-ego-inverso">Ego</button>
+                            </div>
+                            <div class="col-12 col-md-3 mb-2">
+                                <button class="btn btn-md btn-ego-outline">Ego</button>
+                            </div>
+                            <div class="col-12 col-md-3 mb-2">
+                                <button class="btn btn-md btn-ego-elegante">Ego</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="source-box border border-top-0 bg-dark">
+                        <pre><code class="text-light">&lt;button class="btn btn-md btn-ego-principal"&gt;Ego&lt;/button&gt;
+&lt;button class="btn btn-md btn-ego-inverso"&gt;Ego&lt;/button&gt;
+&lt;button class="btn btn-md btn-ego-outline"&gt;Ego&lt;/button&gt;
+&lt;button class="btn btn-md btn-ego-elegante"&gt;Ego&lt;/button&gt;</code></pre>
+                    </div>
+                </section>
+
+                <section class="mb-4">
+                    <h2 class="font-cuisini mb-1">Botones de Colette.</h2>
+                    <p class="font-recipe fs-5 mb-4">Los botones de Colette son fuertes y decididos, al deslizar el
+                        cursor tienen un efecto que se mantiene firme.</p>
+                </section>
+
+                <section class="example-block mb-5">
+                    <div class="preview-box border p-4 text-center">
+                        <div class="row">
+                            <div class="col-12 col-md-3 mb-2">
+                                <button class="btn btn-md btn-collete-principal">Collete</button>
+                            </div>
+                            <div class="col-12 col-md-3 mb-2">
+                                <button class="btn btn-md btn-collete-inverso">Collete</button>
+                            </div>
+                            <div class="col-12 col-md-3 mb-2">
+                                <button class="btn btn-md btn-collete-outline">Collete</button>
+                            </div>
+                            <div class="col-12 col-md-3 mb-2">
+                                <button class="btn btn-md btn-collete-elegante">Collete</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="source-box border border-top-0 bg-dark">
+                        <pre><code class="text-light">&lt;button class="btn btn-md btn-colette-principal"&gt;Colette&lt;/button&gt;
+&lt;button class="btn btn-md btn-colette-inverso"&gt;Colette&lt;/button&gt;
+&lt;button class="btn btn-md btn-colette-outline"&gt;Colette&lt;/button&gt;
+&lt;button class="btn btn-md btn-colette-elegante"&gt;Colette&lt;/button&gt;</code></pre>
+                    </div>
+                </section>
+
+                <section class="mb-4">
+                    <h2 class="font-cuisini mb-1">Tamaños para botones.</h2>
+                    <p class="font-recipe fs-5 mb-4">Esta librería cuenta con tres tamaños para los diferentes tipos de
+                        botones: lg = Grande, md = Mediano y sm = Pequeño.</p>
+                </section>
+
+                <section class="example-block mb-5">
+                    <div class="preview-box border p-4 text-center">
+                        <div class="row align-items-center">
+                            <div class="col-12 col-md-4 mb-2">
+                                <button class="btn btn-lg btn-remy-principal">Remy Grande</button>
+                            </div>
+                            <div class="col-12 col-md-4 mb-2">
+                                <button class="btn btn-md btn-ego-outline">Ego Mediano</button>
+                            </div>
+                            <div class="col-12 col-md-4 mb-2">
+                                <button class="btn btn-sm btn-collete-inverso">Collete Pequeño</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="source-box border border-top-0 bg-dark">
+                        <pre><code class="text-light">&lt;button class="btn btn-lg btn-remy-principal"&gt;Remy Grande&lt;/button&gt;
+&lt;button class="btn btn-md btn-ego-outline"&gt;Ego Mediano&lt;/button&gt;
+&lt;button class="btn btn-sm btn-colette-inverso"&gt;Colette Pequeño&lt;/button&gt;</code></pre>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+    <footer class="font-cuisini bg-dark text-light fs-4 text-center ">
+        Little-Chef &copy; 2026. Todos los derechos reservados.
+    </footer>
 </body>
+
 </html>

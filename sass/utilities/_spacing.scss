@@ -1,0 +1,69 @@
+@use "sass:map";
+@use "../variables" as v;
+
+@each $tipo, $espaciado in v.$spacers{
+
+    //paddings
+    .p-#{$tipo}{
+        padding: $espaciado;
+    }
+
+    .pt-#{$tipo}{
+        padding-top: $espaciado;
+    }
+    .pb-#{$tipo}{
+        padding-bottom: $espaciado;
+    }
+    .pl-#{$tipo}{
+        padding-left: $espaciado;
+    }
+    .pr-#{$tipo}{
+        padding-right: $espaciado;
+    }
+
+    .px-#{$tipo}{
+        padding-left: $espaciado;
+        padding-right: $espaciado;
+    }
+    .py-#{$tipo}{
+        padding-top: $espaciado;
+        padding-bottom: $espaciado;
+    }
+
+    //margins
+
+    .m-#{$tipo}{
+        margin: $espaciado;
+    }
+    .mt-#{$tipo}{
+        margin-top: $espaciado;
+    }
+    .mb-#{$tipo}{
+        margin-bottom: $espaciado;
+    }
+    .ml-#{$tipo}{
+        margin-left: $espaciado;
+    }
+    .mr-#{$tipo}{
+        margin-right: $espaciado;
+    }
+
+    .mx-#{$tipo}{
+        margin-left: $espaciado;
+        margin-right: $espaciado;
+    }
+    .my-#{$tipo}{
+        margin-top: $espaciado;
+        margin-bottom: $espaciado;
+    }
+
+
+}
+
+//generar clase .gap-n
+@each $key, $value in v.$spacers{
+    .gap-#{$key}{
+        gap: $value !important;
+    }
+
+}

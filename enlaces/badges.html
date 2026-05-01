@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/littlechefLibrary.css">
-    <title>Navbars - Little Chef</title>
+    <title>Badges - Little Chef</title>
 </head>
 <body>
-     <!-- NAVBAR-->
+    <!-- NAVBAR-->
     <header class="navbar-sticky">
         <nav class="navbar navbar-remy">
             <a href="#" class="nav-logo d-flex align-items-center" style="text-decoration: none;">
@@ -30,7 +30,7 @@
 
     <div class="container-fluid">
         <div class="row">
-           <!--SIDEBAR-->
+          <!--SIDEBAR-->
             <aside class="col-12 col-md-4 col-lg-3 col-xl-2 p-0">
                 <nav class="sidebar sidebar-remy">
                     <div class="sidebar-header font-remy">Documentación</div>
@@ -63,92 +63,82 @@
                     </ul>
                 </nav>
             </aside>
+
             <main class="col-12 col-md-8 col-lg-9 col-xl-10 p-4">
+
                 <section class="mb-5 text-center">
-                   <h1 class="font-remy text-uppercase mb-2">Barras de Navegación</h1>
-                   <p class="font-recipe fs-5">Navegación responsiva y adaptable, inspirada en la alta cocina.</p>
-                   <p class="font-recipe fs-5 text-secondary">"El menú principal es la puerta de entrada a tu restaurante. Usa la clase base .navbar y combínala con tus temas favoritos."</p>
+                    <h1 class="font-remy text-uppercase mb-2">Badges (Insignias)</h1>
+                    <p class="font-recipe fs-5">
+                        Pequeños indicadores para resaltar estados, categorías o notificaciones en tus platillos.
+                    </p>
+                    <p class="font-recipe fs-5 text-secondary">
+                        "El detalle final en la presentación. Usa insignias para destacar lo que realmente importa."
+                    </p>
                 </section>
-                <section class="mb-4">
-                    <h2 class="font-remy mb-1">Navbar de Remy</h2>
-                    <p class="font-recipe fs-5 mb-4">El estilo vibrante y principal de la librería. Se adapta automáticamente a pantallas pequeñas con un menú de hamburguesa.</p>
-                </section>
-                <section class="example-block mb-5">
-                    <div class="preview-box border p-0" style="overflow: hidden;">
-                        <nav class="navbar navbar-remy">
-                            <a href="#" class="nav-logo">
-                                <span class="text-light fw-bold fs-5">Remy UI</span>
-                            </a>
-                            <input type="checkbox" id="menu-remy-ejemplo" class="nav-checkbox">
-                            <label for="menu-remy-ejemplo" class="nav-toggle">
-                                <span class="bar"></span>
-                                <span class="bar"></span>
-                                <span class="bar"></span>
-                            </label>
-                            <ul class="nav-links">
-                                <li><a href="#">Recetas</a></li>
-                                <li><a href="#">Ingredientes</a></li>
-                                <li><a href="#">Contacto</a></li>
-                            </ul>
-                        </nav>
-                    </div>
 
+                <section class="mb-4">
+                    <h2 class="font-remy mb-1">Badges Temáticas</h2>
+                    <p class="font-recipe fs-5 mb-4">Utiliza las clases utilitarias de fondo (<code>.bg-remy</code>, <code>.bg-ego</code>) combinadas con el color de texto claro (<code>.text-light</code>) para darle vida a tus insignias.</p>
+                </section>
+
+                <section class="example-block mb-5">
+                    <div class="preview-box border p-4 text-center">
+                        <div class="d-flex justify-content-center gap-3 flex-wrap">
+                            <span class="badge bg-remy text-light font-recipe fs-6 px-3 py-1 rounded">Remy</span>
+                            <span class="badge bg-ego text-light font-recipe fs-6 px-3 py-1 rounded">Ego</span>
+                            <span class="badge bg-collete text-light font-recipe fs-6 px-3 py-1 rounded">Collete</span>
+                            <span class="badge bg-linguini text-light font-recipe fs-6 px-3 py-1 rounded">Linguini</span>
+                        </div>
+                    </div>
                     <div class="source-box border border-top-0 bg-dark">
-                        <pre><code class="text-light">&lt;nav class="navbar navbar-remy"&gt;
-    &lt;a href="#" class="nav-logo"&gt;
-        &lt;img src="logo.png" alt="Logo"&gt;
-    &lt;/a&gt;
-    &lt;!-- El ID del checkbox debe coincidir con el for del label --&gt;
-    &lt;input type="checkbox" id="menu-movil" class="nav-checkbox"&gt;
-    &lt;label for="menu-movil" class="nav-toggle"&gt;
-        &lt;span class="bar"&gt;&lt;/span&gt;
-        &lt;span class="bar"&gt;&lt;/span&gt;
-        &lt;span class="bar"&gt;&lt;/span&gt;
-    &lt;/label&gt;
-    &lt;ul class="nav-links"&gt;
-        &lt;li&gt;&lt;a href="#"&gt;Recetas&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href="#"&gt;Ingredientes&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href="#"&gt;Contacto&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-&lt;/nav&gt;</code></pre>
+<pre><code class="text-light">&lt;span class="badge bg-remy text-light px-3 py-1 rounded"&gt;Remy&lt;/span&gt;
+&lt;span class="badge bg-ego text-light px-3 py-1 rounded"&gt;Ego&lt;/span&gt;
+&lt;span class="badge bg-colette text-light px-3 py-1 rounded"&gt;collete&lt;/span&gt;
+&lt;span class="badge bg-linguini text-light px-3 py-1 rounded"&gt;Linguini&lt;/span&gt;</code></pre>
                     </div>
                 </section>
 
                 <section class="mb-4">
-                    <h2 class="font-remy mb-1">Navbar de Ego</h2>
-                    <p class="font-recipe fs-5 mb-4">Un estilo elegante, oscuro y sofisticado para darle presencia a tu interfaz.</p>
+                    <h2 class="font-remy mb-1">Tamaño Automático</h2>
+                    <p class="font-recipe fs-5 mb-4">Las insignias heredan el tamaño de la tipografía del elemento padre. Colócalas dentro de encabezados para que se escalen correctamente.</p>
                 </section>
 
                 <section class="example-block mb-5">
-                    <div class="preview-box border p-0" style="overflow: hidden;">
-                        
-                        <nav class="navbar navbar-ego nav-links">
-                            <a href="#" class="nav-logo">
-                                <span class="text-light fw-bold fs-5">Ego Crítico</span>
-                            </a>
-                            <input type="checkbox" id="menu-ego-ejemplo" class="nav-checkbox">
-                            <label for="menu-ego-ejemplo" class="nav-toggle">
-                                <span class="bar"></span>
-                                <span class="bar"></span>
-                                <span class="bar"></span>
-                            </label>
-                            <ul class="nav-links">
-                                <li><a href="#">Críticas</a></li>
-                                <li><a href="#">Restaurantes</a></li>
-                                <li><a href="#">Perfil</a></li>
-                            </ul>
-                        </nav>
-
+                    <div class="preview-box border p-4">
+                        <h1 class="font-remy mb-3">Sopa de Cebolla <span class="badge bg-remy text-light rounded px-2 py-1 fs-5" style="vertical-align: middle;">Nuevo</span></h1>
+                        <h3 class="font-remy mb-3">Pato a la Naranja <span class="badge bg-ego text-light rounded px-2 py-1 fs-6" style="vertical-align: middle;">Especial</span></h3>
+                        <h5 class="font-remy mb-0">Crème Brûlée <span class="badge bg-collete text-light rounded px-2 py-1" style="font-size: 0.8rem; vertical-align: middle;">Postre</span></h5>
                     </div>
                     <div class="source-box border border-top-0 bg-dark">
-<pre><code class="text-light">&lt;nav class="navbar navbar-ego"&gt;
-    &lt;!-- Misma estructura, solo cambia la clase a navbar-ego --&gt;
-&lt;/nav&gt;</code></pre>
+<pre><code class="text-light">&lt;h1 class="font-remy"&gt;Sopa de Cebolla &lt;span class="badge bg-remy text-light rounded"&gt;Nuevo&lt;/span&gt;&lt;/h1&gt;
+&lt;h3 class="font-remy"&gt;Pato a la Naranja &lt;span class="badge bg-ego text-light rounded"&gt;Especial&lt;/span&gt;&lt;/h3&gt;
+&lt;h5 class="font-remy"&gt;Crème Brûlée &lt;span class="badge bg-colette text-light rounded"&gt;Postre&lt;/span&gt;&lt;/h5&gt;</code></pre>
+                    </div>
+                </section>
+
+                <section class="mb-4">
+                    <h2 class="font-remy mb-1">Insignias de Notificación</h2>
+                    <p class="font-recipe fs-5 mb-4">Ideales para mostrar conteos o notificaciones dentro de los botones de tu interfaz.</p>
+                </section>
+
+                <section class="example-block mb-5">
+                    <div class="preview-box border p-4 text-center">
+                        <button class="btn btn-md btn-ego-principal font-recipe">
+                            Nuevas Recetas
+                            <span class="bg-light text-ego rounded px-2 py-1 ms-2 fw-bold" style="font-size: 0.85em;">4</span>
+                        </button>
+                    </div>
+                    <div class="source-box border border-top-0 bg-dark">
+<pre><code class="text-light">&lt;button class="btn btn-md btn-ego-principal font-recipe"&gt;
+    Nuevas Recetas
+    &lt;span class="bg-light text-ego rounded px-2 py-1 fw-bold"&gt;4&lt;/span&gt;
+&lt;/button&gt;</code></pre>
                     </div>
                 </section>
             </main>
         </div>
     </div>
+    
     <footer class="font-cuisini bg-dark text-light fs-4 text-center ">
         Little-Chef &copy; 2026. Todos los derechos reservados.
     </footer>

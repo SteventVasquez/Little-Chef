@@ -1,0 +1,54 @@
+@use "../variables";
+@use "../mixins/borders" as bord;
+@use "sass:map";
+
+.border {
+    //border default 2px
+    @include bord.make-border-complete(map.get(variables.$borders, "2"), variables.$default-border-color);
+}
+
+//bordes redondeados 6px default
+.rounded {
+    @include bord.rounded-complete(variables.$default-border-radius);
+}
+
+@each $nombre, $grosor in variables.$borders{
+    .border-#{$nombre}{
+        @include bord.make-border-complete($grosor, variables.$default-border-color);
+
+    }   
+}
+
+@each $nombre, $color in variables.$theme-colors{
+    .border-#{$nombre}{
+        @include bord.change-color($color);
+    }
+
+}
+
+@each $nombre, $borde in variables.$border-radius{
+    .rounded-#{$nombre}{
+        @include bord.rounded-complete($borde);
+    }
+}
+
+@each $nombre, $posicion in variables.$standart-positions{
+    .border-#{$nombre}{
+        $color-borde: map.get(variables.$theme-colors, "primary");
+        @include bord.make-border(map.get(variables.$borders, "2"),$color-borde, $posicion);
+    }
+
+    .border-#{$nombre}-0{
+        $color-borde: map.get(variables.$theme-colors, "primary");
+        @include bord.make-border(map.get(variables.$borders, "0"), $color-borde, $posicion);
+    }
+
+    .rounded-#{$nombre}{
+        @include bord.rounded(variables.$default-border-radius, $posicion);
+    }
+    @each $tipo, $radius in variables.$border-radius{
+        .rounded-#{$nombre}-#{$tipo}{
+            @include bord.rounded($radius, $posicion);
+        }
+    }
+}

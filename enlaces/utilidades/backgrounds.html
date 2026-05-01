@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/littlechefLibrary.css">
+    <title>Backgrounds - Little Chef</title>
+</head>
+<body>
+    <!-- NAVBAR-->
+    <header class="navbar-sticky">
+        <nav class="navbar navbar-remy">
+            <a href="#" class="nav-logo d-flex align-items-center" style="text-decoration: none;">
+                <img src="/img/remyLogo.png" alt="remy" style="width: 50px; height: auto;">
+                <span class="font-remy fw-bold fs-4 ms-2 text-light">Little Chef</span>
+            </a>
+            <input type="checkbox" id="menu-toggle-main" class="nav-checkbox">
+            <label for="menu-toggle-main" class="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </label>
+            <ul class="nav-links font-recipe">
+                <li><a href="../../index.html" class="activo">Inicio</a></li>
+                <li><a href="../layout.html">Documentación</a></li>
+                <li><a href="https://github.com/SteventVasquez/Little-Chef">GitHub</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container-fluid">
+        <div class="row">
+            <!--SIDEBAR-->
+            <aside class="col-12 col-md-4 col-lg-3 col-xl-2 p-0">
+                <nav class="sidebar sidebar-remy">
+                    <div class="sidebar-header font-remy">Documentación</div>
+                    <ul class="sidebar-menu font-recipe">
+                        <div class="sidebar-section-title">
+                            <p>Layout</p>
+                        </div>
+                        <li><a href="../layout.html#clase-container"  class="sidebar-link">Contenedores</a></li>
+                        <li><a href="../layout.html#grid" class="sidebar-link">Grid</a></li>
+                        <div class="sidebar-section-title">
+                            <p>Componentes</p>
+                        </div>
+                        <li><a href="../alertas.html" class="sidebar-link">Alertas</a></li>
+                        <li><a href="../badges.html" class="sidebar-link">Badges</a></li>
+                        <li><a href="../botones.html" class="sidebar-link">Botones</a></li>
+                        <li><a href="../formularios.html" class="sidebar-link">Formularios</a></li>
+                        <li><a href="../navbar.html" class="sidebar-link">Navbars</a></li>
+                        <li><a href="../tablas.html" class="sidebar-link">Tablas</a></li>
+                        <li><a href="../tarjetas.html" class="sidebar-link">Tarjetas</a></li>
+                        <div class="sidebar-section-title">
+                            <p>Utilidades</p>
+                        </div>
+                        <li><a href="texto.html" class="sidebar-link">Texto</a></li>
+                        <li><a href="espaciado.html" class="sidebar-link">Espaciado</a></li>
+                        <li><a href="backgrounds.html" class="sidebar-link">Backgrounds</a></li>
+                        <li><a href="flex.html" class="sidebar-link">Flex</a></li>
+                        <li><a href="display.html" class="sidebar-link">Ocultar/Mostrar</a></li>
+                        <li><a href="bordes.html" class="sidebar-link">Bordes</a></li>
+                        <li><a href="shadows.html" class="sidebar-link">Sombras</a></li>
+
+                    </ul>
+                </nav>
+            </aside>
+
+            <main class="col-12 col-md-8 col-lg-9 col-xl-10 p-4">    
+                <section class="example-block mb-5">
+                    <h2 class="font-remy mb-3">Fondos (Backgrounds)</h2>
+                    <p class="font-recipe mb-3 fs-5">El fondo es la base de cualquier gran presentación.
+                        Nuestras clases de fondo <code class="text-danger">.bg-</code> te permite establecer el tono de tu sección, 
+                        desde un lienzo limpio y claro hasta una base oscura y elegante para resaltar tus ingredientes principales.
+                    </p>
+                    <div class="preview-box border">
+                        <div class="container font-recipe fs-5">
+                            <div class="bg-primary m-2 text-center">Background Primary</div>
+                            <div class="bg-secondary m-2 text-center">Background Secondary</div>
+                            <div class="bg-success m-2 text-center">Background Success</div>
+                            <div class="bg-danger m-2 text-center">Background Danger</div>
+                            <div class="bg-info m-2 text-center">Background Info</div>
+                            <div class="bg-warning m-2 text-center">Background Warning</div>
+                            <div class="bg-light border m-2 text-center">Background Light</div>
+                            <div class="bg-alert m-2 text-center">Background Alert</div>
+                            <div class="bg-dark  m-2 text-center text-light">Background Dark</div>
+                            
+                        </div>
+                    </div>
+                    <div class="source-box border border-top-0 bg-dark ">
+                        <pre><code class="text-light">&lt;div class="bg-primary m-2 text-center"&gt;Background Primary&lt;/div&gt;
+&lt;div class="bg-secondary m-2 text-center"&gt;Background Secondary&lt;/div&gt;
+&lt;div class="bg-success m-2 text-center"&gt;Background Success&lt;/div&gt;
+&lt;div class="bg-danger m-2 text-center"&gt;Background Danger&lt;/div&gt;
+&lt;div class="bg-info m-2 text-center"&gt;Background Info&lt;/div&gt;
+&lt;div class="bg-warning m-2 text-center"&gt;Background Warning&lt;/div&gt;
+&lt;div class="bg-light border m-2 text-center"&gt;Background Light&lt;/div&gt;
+&lt;div class="bg-alert m-2 text-center"&gt;Background Alert&lt;/div&gt;
+&lt;div class="bg-dark  m-2 text-center text-light"&gt;Background Dark&lt;/div&gt;
+
+</code></pre>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+    <footer class="font-cuisini bg-dark text-light fs-4 text-center ">
+        Little-Chef &copy; 2026. Todos los derechos reservados.
+    </footer>
+</body>
+
+</html>

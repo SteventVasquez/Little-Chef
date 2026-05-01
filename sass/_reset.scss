@@ -1,0 +1,37 @@
+/* Box model consistente */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Quitar márgenes/padding por defecto */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Mejoras base */
+html {
+  font-size: 16px;
+}
+
+body {
+  line-height: 1.5;
+}
+
+/* Medios responsivos */
+img,
+picture,
+video {
+  max-width: 100%;
+  display: block;
+}
+
+/* Formularios heredan tipografía */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/littlechefLibrary.css">
+    <title>Tarjetas - Little Chef</title>
+</head>
+<body>
+     <!-- NAVBAR-->
+    <header class="navbar-sticky">
+        <nav class="navbar navbar-remy">
+            <a href="#" class="nav-logo d-flex align-items-center" style="text-decoration: none;">
+                <img src="/img/remyLogo.png" alt="remy" style="width: 50px; height: auto;">
+                <span class="font-remy fw-bold fs-4 ms-2 text-light">Little Chef</span>
+            </a>
+            <input type="checkbox" id="menu-toggle-main" class="nav-checkbox">
+            <label for="menu-toggle-main" class="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </label>
+            <ul class="nav-links font-recipe">
+                <li><a href="../../index.html" class="activo">Inicio</a></li>
+                <li><a href="./layout.html">Documentación</a></li>
+                <li><a href="https://github.com/SteventVasquez/Little-Chef">GitHub</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container-fluid">
+        <div class="row">
+           <!--SIDEBAR-->
+            <aside class="col-12 col-md-4 col-lg-3 col-xl-2 p-0">
+                <nav class="sidebar sidebar-remy">
+                    <div class="sidebar-header font-remy">Documentación</div>
+                    <ul class="sidebar-menu font-recipe">
+                        <div class="sidebar-section-title">
+                            <p>Layout</p>
+                        </div>
+                      <li><a href="../enlaces/layout.html#contenedores"  class="sidebar-link">Contenedores</a></li>
+                        <li><a href="../enlaces/layout.html#clase-grid" class="sidebar-link">Grid</a></li>
+                        <div class="sidebar-section-title">
+                            <p>Componentes</p>
+                        </div>
+                        <li><a href="../enlaces/alertas.html" class="sidebar-link">Alertas</a></li>
+                        <li><a href="../enlaces/badges.html" class="sidebar-link">Badges</a></li>
+                        <li><a href="../enlaces/botones.html" class="sidebar-link">Botones</a></li>
+                        <li><a href="../enlaces/formularios.html" class="sidebar-link">Formularios</a></li>
+                        <li><a href="../enlaces/navbar.html" class="sidebar-link">Navbars</a></li>
+                        <li><a href="../enlaces/tablas.html" class="sidebar-link">Tablas</a></li>
+                        <li><a href="tarjetas.html" class="sidebar-link">Tarjetas</a></li>
+                        <div class="sidebar-section-title">
+                            <p>Utilidades</p>
+                        </div>
+                        <li><a href="../enlaces/utilidades/texto.html" class="sidebar-link">Texto</a></li>
+                        <li><a href="../enlaces/utilidades/espaciado.html" class="sidebar-link">Espaciado</a></li>
+                        <li><a href="../enlaces/utilidades/backgrounds.html" class="sidebar-link">Backgrounds</a></li>
+                        <li><a href="../enlaces/utilidades/flex.html" class="sidebar-link">Flex</a></li>
+                        <li><a href="../enlaces/utilidades/display.html" class="sidebar-link">Ocultar/Mostrar</a></li>
+                        <li><a href="../enlaces/utilidades/bordes.html" class="sidebar-link">Bordes</a></li>
+                        <li><a href="../enlaces/utilidades/shadows.html" class="sidebar-link">Sombras</a></li>
+                    </ul>
+                </nav>
+            </aside>
+            <main class="col-12 col-md-8 col-lg-9 col-xl-10 p-4">
+                <section class="mb-5 text-center">
+                    <h1 class="font-remy text-uppercase mb-2">Tarjetas (Cards)</h1>
+                    <p class="font-recipe fs-5">
+                        Contenedores flexibles y extensibles para mostrar contenido estructurado, como recetas o reseñas.
+                    </p>
+                    <p class="font-recipe fs-5 text-secondary">
+                        "Una buena presentación es la mitad del platillo. Usa las tarjetas para organizar imágenes, textos y acciones en un solo lugar."
+                    </p>
+                </section>
+                <section class="mb-4">
+                    <h2 class="font-remy mb-1">Tarjeta Básica</h2>
+                    <p class="font-recipe fs-5 mb-4">El diseño clásico. Incluye una imagen superior, un título, texto descriptivo y un botón de acción. Utiliza tus utilidades <code>shadow</code> y <code>rounded</code>.</p>
+                </section>
+                <section class="example-block mb-5">
+                    <div class="preview-box border p-4 d-flex justify-content-center bg-light">
+                        <div class="card shadow rounded" style="max-width: 18rem; background-color: #fff;">
+                            <img src="../img/dish.jpg" class="rounded-top" alt="Receta" style="width: 100%; object-fit: cover;">
+                            <div class="card-body p-4">
+                                <h5 class="font-remy fs-4 mb-2">Ratatouille Clásico</h5>
+                                <p class="font-recipe text-secondary mb-4">El platillo campesino que logró conmover hasta al crítico más duro de París.</p>
+                                <button class="btn btn-md btn-remy-principal" style="width: 100%;">Ver Receta</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="source-box border border-top-0 bg-dark">
+<pre><code class="text-light">&lt;div class="card shadow rounded" style="max-width: 18rem;"&gt;
+    &lt;img src="imagen.jpg" class="rounded-top" alt="..."&gt;
+    &lt;div class="card-body p-4"&gt;
+        &lt;h5 class="font-remy fs-4 mb-2"&gt;Ratatouille Clásico&lt;/h5&gt;
+        &lt;p class="font-recipe text-secondary mb-4"&gt;El platillo campesino que...&lt;/p&gt;
+        &lt;button class="btn btn-md btn-remy-principal" style="width: 100%;"&gt;Ver Receta&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                    </div>
+                </section>
+                <section class="mb-4">
+                    <h2 class="font-remy mb-1">Grid de Tarjetas</h2>
+                    <p class="font-recipe fs-5 mb-4">Combina el componente de tarjetas con el sistema de columnas (<code>.col-md-4</code>) para mostrar un catálogo de platillos.</p>
+                </section>
+
+                <section class="example-block mb-5" style="max-width: 100%;">
+                    <div class="preview-box border p-4 bg-light">
+                        
+                        <div class="row">
+                            <div class="col-12 col-md-4 mb-3">
+                                <div class="card shadow border-remy rounded" style="background-color: #fff;">
+                                    <div class="card-body p-4 text-center">
+                                        <h5 class="font-remy fs-4 text-remy mb-2">Sopa de Cebolla</h5>
+                                        <p class="font-recipe mb-3">Entrada caliente perfecta para invierno.</p>
+                                        <button class="btn btn-sm btn-remy-outline">Cocinar</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-4 mb-3">
+                                <div class="card shadow border-ego rounded" style="background-color: #fff;">
+                                    <div class="card-body p-4 text-center">
+                                        <h5 class="font-remy fs-4 text-ego mb-2">Pato a la Naranja</h5>
+                                        <p class="font-recipe mb-3">Un clásico exigente para paladares finos.</p>
+                                        <button class="btn btn-sm btn-ego-outline">Cocinar</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-4 mb-3">
+                                <div class="card shadow border-colette rounded" style="background-color: #fff;">
+                                    <div class="card-body p-4 text-center">
+                                        <h5 class="font-remy fs-4 text-collete mb-2">Crème Brûlée</h5>
+                                        <p class="font-recipe mb-3">Postre delicado con costra de caramelo.</p>
+                                        <button class="btn btn-sm btn-collete-outline">Cocinar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="source-box border border-top-0 bg-dark">
+<pre><code class="text-light">&lt;div class="row"&gt;
+    &lt;div class="col-12 col-md-4"&gt;
+        &lt;div class="card shadow border-remy rounded"&gt;
+            &lt;div class="card-body p-4 text-center"&gt;
+                &lt;h5 class="font-remy text-remy"&gt;Sopa de Cebolla&lt;/h5&gt;
+                &lt;p class="font-recipe"&gt;Entrada caliente...&lt;/p&gt;
+                &lt;button class="btn btn-sm btn-remy-outline"&gt;Cocinar&lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;!-- Repetir para más columnas --&gt;
+&lt;/div&gt;</code></pre>
+                    </div>
+                </section>
+
+                <section class="mb-4">
+                    <h2 class="font-remy mb-1">Tarjetas con Temas (Backgrounds)</h2>
+                    <p class="font-recipe fs-5 mb-4">Utiliza las clases de utilidad como <code>.bg-ego</code> y <code>.text-light</code> para crear tarjetas con fondos sólidos.</p>
+                </section>
+
+                <section class="example-block mb-5">
+                    <div class="preview-box border p-4">
+                        <div class="row justify-content-center">
+                            <div class="col-12 col-md-6">
+                                
+                                <div class="card bg-ego text-primary shadow rounded p-4">
+                                    <h5 class="font-remy fs-3 mb-2">Reseña Crítica</h5>
+                                    <p class="font-recipe fs-5 mb-0">
+                                        "Ayer experimenté algo nuevo, una comida extraordinaria de una fuente singularmente inesperada..."
+                                    </p>
+                                    <div class="mt-3 text-end">
+                                        <small class="fw-bold">- Anton Ego</small>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="source-box border border-top-0 bg-dark">
+<pre><code class="text-light">&lt;div class="card bg-ego text-primary shadow rounded p-4"&gt;
+    &lt;h5 class="font-remy fs-3 mb-2"&gt;Reseña Crítica&lt;/h5&gt;
+    &lt;p class="font-recipe fs-5 mb-0"&gt;"Ayer experimenté algo nuevo..."&lt;/p&gt;
+    &lt;div class="mt-3 text-end"&gt;
+        &lt;small class="fw-bold"&gt;- Anton Ego&lt;/small&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+    
+   <footer class="font-cuisini bg-dark text-light fs-4 text-center ">
+        Little-Chef &copy; 2026. Todos los derechos reservados.
+    </footer>
+</body>
+</html>

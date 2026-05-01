@@ -1,0 +1,68 @@
+@use "../variables" as v;
+
+@use "../fonts" as f;
+@use 'sass:map';
+
+
+@each $name, $family in f.$font-families{
+    .font-#{$name}{
+        font-family: $family;
+    }
+}
+
+@each $size, $value in f.$font-sizes{
+    .fs-#{$size}{
+        font-size: $value;
+    }
+
+}
+
+@each $name, $weight in f.$font-weights{
+    .fw-#{$name}{
+        font-weight: $weight;
+    }
+}
+
+//text-align
+.text-start{
+    text-align: left;
+}
+.text-center{
+    text-align: center;
+}
+.text-end{
+    text-align: right;
+}
+
+//transformaciones
+.text-uppercase{
+    text-transform: uppercase;
+}
+
+.text-lowercase{
+    text-transform: lowercase;
+}
+.text-capitalize{
+    text-transform: capitalize;
+}
+
+//colo de texto
+
+@each $name, $color in v.$theme-colors{
+    .text-#{$name}{
+        color:$color;
+    }
+}
+//cambio de fondo
+@each $name, $color in v.$theme-colors{
+    .bg-#{$name}{
+        background-color: $color;
+    }
+}
+@each $nombre, $paleta in v.$personajes {
+    $base: map.get($paleta, base);
+    
+    .bg-#{$nombre} {
+        background-color: $base !important;
+    }
+}
