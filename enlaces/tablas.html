@@ -7,11 +7,12 @@
     <title>Tablas - Little-Chef</title>
 </head>
 <body>
-    <!--NAVBAR-->
+     <!-- NAVBAR-->
     <header class="navbar-sticky">
         <nav class="navbar navbar-remy">
-            <a href="#" class="nav-logo">
-                <img src="/img/remyLogo.png" alt="remy">
+            <a href="#" class="nav-logo d-flex align-items-center" style="text-decoration: none;">
+                <img src="/img/remyLogo.png" alt="remy" style="width: 50px; height: auto;">
+                <span class="font-remy fw-bold fs-4 ms-2 text-light">Little Chef</span>
             </a>
             <input type="checkbox" id="menu-toggle-main" class="nav-checkbox">
             <label for="menu-toggle-main" class="nav-toggle">
@@ -19,17 +20,17 @@
                 <span class="bar"></span>
                 <span class="bar"></span>
             </label>
-            <ul class="nav-links">
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="./doc.html">Documentación</a></li>
-                <li><a href="#">GitHub</a></li>
+            <ul class="nav-links font-recipe">
+                <li><a href="../../index.html" class="activo">Inicio</a></li>
+                <li><a href="./layout.html">Documentación</a></li>
+                <li><a href="https://github.com/SteventVasquez/Little-Chef">GitHub</a></li>
             </ul>
         </nav>
     </header>
 
     <div class="container-fluid">
         <div class="row">
-            <!--SIDEBAR-->
+         <!--SIDEBAR-->
             <aside class="col-12 col-md-4 col-lg-3 col-xl-2 p-0">
                 <nav class="sidebar sidebar-remy">
                     <div class="sidebar-header font-remy">Documentación</div>
@@ -37,8 +38,11 @@
                         <div class="sidebar-section-title">
                             <p>Layout</p>
                         </div>
-                        <li><a href="../enlaces/layout.html#contenedores"  class="sidebar-link">Contenedores</a></li>
+                      <li><a href="../enlaces/layout.html#contenedores"  class="sidebar-link">Contenedores</a></li>
                         <li><a href="../enlaces/layout.html#clase-grid" class="sidebar-link">Grid</a></li>
+                        <div class="sidebar-section-title">
+                            <p>Componentes</p>
+                        </div>
                         <li><a href="../enlaces/alertas.html" class="sidebar-link">Alertas</a></li>
                         <li><a href="../enlaces/badges.html" class="sidebar-link">Badges</a></li>
                         <li><a href="../enlaces/botones.html" class="sidebar-link">Botones</a></li>
@@ -52,9 +56,10 @@
                         <li><a href="../enlaces/utilidades/texto.html" class="sidebar-link">Texto</a></li>
                         <li><a href="../enlaces/utilidades/espaciado.html" class="sidebar-link">Espaciado</a></li>
                         <li><a href="../enlaces/utilidades/backgrounds.html" class="sidebar-link">Backgrounds</a></li>
+                        <li><a href="../enlaces/utilidades/flex.html" class="sidebar-link">Flex</a></li>
+                        <li><a href="../enlaces/utilidades/display.html" class="sidebar-link">Ocultar/Mostrar</a></li>
                         <li><a href="../enlaces/utilidades/bordes.html" class="sidebar-link">Bordes</a></li>
                         <li><a href="../enlaces/utilidades/shadows.html" class="sidebar-link">Sombras</a></li>
-                        
                     </ul>
                 </nav>
             </aside>
@@ -190,7 +195,7 @@
         </div>
     </div>
     
-    <footer class="container-fluid font-remy bg-dark text-light fs-4 text-center p-4">
+    <footer class="font-cuisini bg-dark text-light fs-4 text-center ">
         Little-Chef &copy; 2026. Todos los derechos reservados.
     </footer>
 </body>
